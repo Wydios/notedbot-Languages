@@ -86,6 +86,7 @@
             "notis": "Notis players"
         },
         "notis": {
+            "players": "Players",
             "total": "Total Notis",
             "give_get": "Notis Give/Get",
             "gamble": "Gamble Wins/Loss",
