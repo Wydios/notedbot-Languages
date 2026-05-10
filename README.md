@@ -27,16 +27,9 @@ You can help translating or improving the bot language files by creating a Pull 
 }
 ```
 
-❌ Wrong Translation
+❌ Wrong Translation (Russian)
 ```json
 {
   "success": "{FeelsOkayMan 👍|wydiosOk} Эмоут ` {emotename} ` был успешно добавлен"
-}
-```
-
-❌ Wrong Translation
-```json
-{
-  "success": "{FeelsOkayMan 👍|changed} Эмоут был успешно добавлен"
 }
 ```
