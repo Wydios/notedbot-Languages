@@ -1,0 +1,232 @@
+{
+    "home": {
+        "subtitles": {
+            "0": "NotedBot, a Twitch chatbot like any other... or maybe not?",
+            "1": "Ready to boost your chat into hyperdrive? 🚀",
+            "2": "A bot that does more than just {prefix}ping – guaranteed ⚙️",
+            "3": "Not your standard bot – NotedBot brings the extra power ⚡",
+            "4": "More than just a bot – your all-rounder 🎯",
+            "5": "Like a protocol droid, but way cooler 🤖"
+        },
+        "feature": {
+            "cloud": {
+                "title": "Cloud Hosting",
+                "description": "No setup required. NotedBot runs 24/7 on a dedicated root server."
+            },
+            "type": {
+                "title": "Modern Programming Language",
+                "description": "NotedBot is written in TypeScript and built with modern technologies."
+            },
+            "stv": {
+                "title": "7TV Integration",
+                "description": "NotedBot supports 7TV Commands for managing Emotes."
+            },
+            "notis": {
+                "title": "Notis System",
+                "description": "Collect Notis, trade them, and claim the #1 spot on the Notis leaderboard!"
+            }
+        },
+        "twitch": {
+            "try": {
+                "title": "Try It Now",
+                "description": "Check out the NotedBot Twitch chat on the right. Prefix: {prefix}"
+            },
+            "title": {
+                "is": "Customize NotedBot the way you want",
+                "isNot": "Ready to get started, boss?"
+            },
+            "description": {
+                "is": "Customize NotedBot to your needs and control all features easily from the dashboard.",
+                "isNot": "Connect your Twitch account and let NotedBot join your channel. So what are you waiting for? Take your stream to the next level."
+            },
+            "hint": "*The bot will automatically join your channel after logging in. Please make sure that NotedBot is not banned and has moderator status."
+        },
+        "trust": "Trusted Users"
+    },
+    "commands": {
+        "subtitles": {
+            "0": "Here are all NotedBot commands. Search or filter by commands",
+            "1": "The secret tools for your daily chat grind 🧰",
+            "2": "Your command arsenal – locked and loaded 🚀",
+            "3": "From {prefix}ping to {prefix}notis – everything I can do is right here 🍷",
+            "4": "Level up your chat with the best NotedBot commands ✨",
+            "5": "True power lies in your commands 🔮"
+        },
+        "search": "🔎 Search for a command?",
+        "perms": "Any Access",
+        "category": "All Category",
+        "details": {
+            "back": "Back to Commands",
+            "usage": "Usage",
+            "description": "Description",
+            "category": "Categorie",
+            "supports": "Supports"
+        },
+        "noFound": "No command found. Try a different search, filter, or category."
+    },
+    "stats": {
+        "subtitles": {
+            "0": "Here you can find all statistics about NotedBot",
+            "1": "More transparent than a Jedi ghost 👻",
+            "2": "Everything’s out in the open – see what’s going on 🤖",
+            "3": "What the bot knows, everyone knows 🕵️",
+            "4": "Nothing stays hidden – Notis never lie 📈",
+            "5": "A look behind the scenes – global, live, relentless 🫣"
+        },
+        "connection": "Real-time Connection",
+        "commands": {
+            "available": "Available Commands",
+            "executed": "Executed Commands"
+        },
+        "totals": {
+            "commands": "Commands Executed",
+            "chatters": "Unique Chatters",
+            "afks": "Currently AFK Users",
+            "reminders": "Active Reminders",
+            "notis": "Notis players"
+        },
+        "notis": {
+            "total": "Total Notis",
+            "give_get": "Notis Give/Get",
+            "gamble": "Gamble Wins/Loss",
+            "gamble_notis": "Gamble Wins/Losses (Notis Count)",
+            "crates": "Crates Found",
+            "winrate": "Winrate"
+        }
+    },
+    "dashboard": { 
+        "login": "Hit the button below and let the magic happen",
+        "noUser": "No data found for you. Try sending a message in a chat where NotedBot is activn",
+        "available": {
+            "live": {
+                "channel": "Bot in chat",
+                "user": "Cheers"
+            },
+            "offline": {
+                "channel": "Bot joins when ready",
+                "user": "Hello"
+            }
+        },
+        "settings": {
+            "title": "Channel Settings",
+            "description": "Basic settings for NotedBot in your channel",
+            "lang": "Channel Language",
+            "langBlock": "Block Custom Language",
+            "silentBlock": "Suppress all errors and do not output them"
+        },
+        "announce": {
+            "title": "Announcements",
+            "description": "Control which notifications NotedBot sends in your channel."
+        },
+        "editor": {
+            "title": "7TV Editors",
+            "description": "Manage your 7TV editors",
+            "existing": "This user is already an editor",
+            "noList": "No 7TV editors right now",
+            "cancel": "Cancel",
+            "add": "Add 7TV Editor",
+            "zb": "e.g. Wydios",
+            "delete": "Delete"
+        },
+        "ambassador": {
+            "title": "Ambassadors",
+            "description": "Manage your ambassadors",
+            "existing": "This user is already an ambassador",
+            "noList": "No ambassadors right now",
+            "cancel": "Cancel",
+            "add": "Add Ambassador",
+            "zb": "e.g. Wydios",
+            "delete": "Delete"
+        },
+        "custom": {
+            "title": "Custom Commands",
+            "description": "Create your own Twitch chat commands with variables, cooldowns and permissions",
+            "noCommands": "No commands available",
+            "edit": "Edit",
+            "delete": "Delete",
+            "create": "Create Command",
+            "save": "Save",
+            "showAll": "Show All ({{count}})",
+            "showLess": "Show Less",
+            "editTitle": "Edit Command",
+            "createTitle": "Create Command",
+            "modalDescription": "Setup your custom Twitch command",
+            "trigger": "Trigger",
+            "message": "Message",
+            "showVariables": "Show Variables",
+            "hideVariables": "Hide Variables",
+            "cooldown": "Cooldown",
+            "cooldownDescription": "Minimum 3 seconds, max 3600 seconds",
+            "permission": "Permission",
+            "permissionDescription": "Who can use this command",
+            "close": "Close",
+            "permissions": {
+                "default": "Default",
+                "vip": "VIP",
+                "mod": "Moderator",
+                "ambassador": "Ambassador",
+                "broadcaster": "Broadcaster",
+                "admin": "Admin",
+                "dev": "Developer"
+            }
+        },
+        "behavior": {
+            "title": "Advanced Settings",
+            "description": "Manage additional bot settings",
+            "mod_only": "Only for Moderators",
+            "reply_to_stv": "Repeat 7TV Emotes",
+            "activity_mode": "Activity Mode",
+            "live": "Live Only",
+            "offline": "Offline Only",
+            "always": "Always",
+            "use_action_messages": "Reply using /me",
+            "ai_enabled": "Enable AI",
+            "ai_personality": "AI Personality",
+            "ai_default": "Default",
+            "ai_friendly": "Friendly",
+            "ai_chaotic": "Chaotic",
+            "ai_sarcastic": "Sarcastic",
+            "ai_gamer": "Gamer",
+            "ai_expert": "Expert",
+            "ai_coder": "Coder",
+            "ai_memelord": "Memelord",
+            "ai_evil_ai": "Evil AI",
+            "ai_papaplatte": "Papaplatte",
+            "ai_letshugo": "LetsHugoTV",
+            "streak_enabled": "Enable Streak",
+            "streak_message": "Custom Streak Message",
+            "streak_placeholder": "Emote combo {count}x {emote}",
+            "pyramid_enabled": "Enable Pyramid",
+            "pyramid_message": "Custom Pyramid Message",
+            "pyramid_placeholder": "{count}-level pyramid with {emote}",
+            "variables": "Variables: {count} {emote} • Trigger at {number}"
+        },
+        "userSettings": {
+            "title": "User Settings",
+            "description": "Manage your personal NotedBot preferences",
+            "lang": "Sets the language NotedBot uses to communicate with you",
+            "antiping": "Prevents the bot from pinging you in messages",
+            "whisper": "The bot sends you messages via Whisper instead of chat (if possible)",
+            "presence": "Automatically updates your 7TV presence status",
+            "permission": "Your current NotedBot role"
+        },
+        "safe": {
+            "title": "Safe Area",
+            "description": "Here you can re-add NotedBot to your channel.",
+            "status": "Active",
+            "me": "/me Style"
+        },
+        "danger": {
+            "title": "Danger Zone",
+            "description": "If you remove the bot, ALL your data will be permanently deleted.\n\nThis includes:\n• Custom commands\n• Command settings (enabled/disabled)\n• Live notifications\n• 7TV / Twitch features (badges, emotes, paints)\n• Reminders & stored data\n\nFor security, you will receive a code that you must enter.\nAfter removal, you will be automatically logged out."
+        },
+        "remove": {
+            "title": "Are you <span style='color: var(--text-primary)'>REALLY</span> sure?",
+            "description": "To confirm removing NotedBot, type <strong class='dashboard-confirm-highlight'>{{code}}</strong> below. ⚠ This action CANNOT be undone."
+        },
+        "logout": {
+            "title": "Logout",
+            "description": "Log out of this website."
+        }
+    }
+}
