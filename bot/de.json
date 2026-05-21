@@ -77,7 +77,7 @@
 				"invalidName": "{⛔ ➜|wydiosAngry} 7tv Akzeptiert diese Zeichen nicht",
 				"invalidSyntax": "{⛔ ➜|wydiosAngry} Der Name enthält ungültige Zeichen. Shush versuch mal mit \\",
 				"stvDown": "{FeelsDankMan ➜|wydiosSad} 7tv ist Down",
-				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter Fehler Keine Error Case für: {error}"
+				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter 7tv Fehler"
 			},
 			"cosmetics": {
   				"presence": {
@@ -226,6 +226,15 @@
 			"disabled": "{FeelsOkayMan 👍|wydiosOk} {user} ich pinge dich wieder in Nachrichten",
 			"enabled": "{FeelsOkayMan 👍|wydiosOk} {user|antiping} ich pinge dich nicht mehr in Nachrichten",
 			"test": "{ping}"
+		},
+		"badge": {
+			"info": {
+				"badge": "{FeelsOkayMan 👍|wydiosOk} {badgeName} • {badgeDescription} • Vorschau: {badgeImage} • {badgeCount} besitzen dieses Badge",
+				"user": "{FeelsOkayMan 👍|wydiosOk} {userName} hat das Badge `{badgeName}` • {badgeDescription} • Vorschau: {badgeImage} • {badgeCount} besitzen dieses Badge",
+				"badges": "{FeelsOkayMan 👍|wydiosOk} {userName} besitzt akutell insgesamt {badgeCount} Badges • Alle Badges: {links}"
+			},
+			"userHaveNoBadges": "{FeelsDankMan ➜|wydiosStop} {userName} hat keine Badges",
+			"userHaveNoBadge": "{FeelsDankMan ➜|wydiosStop} {userName} hat kein Aktives Badge"
 		},
 		"ban": {
   			"success": {
@@ -786,6 +795,10 @@
 			"changed": "{FeelsOkayMan 👍|wydiosOk} Die Permission von {user} wurde auf `{rank}` gesetzt"
 		},
 		"pick": "🎲 ➜ Ich Wähle `{choice}`",
+		"pin": {
+        	"noPinned": "{⚠️ ➜|wydiosStop} Aktuell ist keine Nachricht angepinnt",
+        	"unpinned": "{FeelsOkayMan ➜|wydiosOk} Angepinnte Nachricht entfernt"
+		},
 		"ping": {
 			"normal": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latenz (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api}",
 			"dev": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latenz (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Mod in {modCount} • 7TV in {stvCount}{affiliateText}{partnerText} • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api} • Subs: {allSubscriptions} (Cost: {cost}) • {serverMessage} Server: {serverDays}",
@@ -958,7 +971,7 @@
 			"error": "{FeelsBadMan|wydiosSad} Ich hatte einen Fehler beim Verarbeiten des Requests"
 		},
 		"user": {
-			"userbanned": {
+			"userBanned": {
 				"indefinite": "⛔ {user|antiping} ist gebannt Grund: TOS (Terms of Service) monkaS",
 				"temporary": "⛔ {user|antiping} ist zeitlich gebannt Grund: TOS (Terms of Service) monkaS",
 				"deactivated": "🌃 {user|antiping} is Disabled peepoSad",
@@ -987,7 +1000,7 @@
 			"prefix": " • Prefix: {prefix}",
 			"profile": {
 				"bttv": " • bttv {bttv}",
-				"emotes": " • Emote: {emotes}",
+				"emotes": " • Emotes: {emotes}",
 				"ffz": " • ffz {ffz}",
 				"stv": " • 7tv {stv}",
 				"nothing": " • Keine Accounts ( DinoDance typ )"
@@ -1100,8 +1113,6 @@
 			}
 		},
 		"prefix": "{FeelsOkayMan 👍|wydiosOk} Mein Channel Prefix ist `{prefix}`",
-		"stv": "DinoDance ➜ {user|antiping} Bitte Installiere dir 7tv link: https://7tv.app/",
-		"sad": "{peepoSad|wydiosSad}",
 		"notification": {
 			"changelog": "imGlitch Developer Changelogs wurde aktualisiert • {link}",
 			"badge": {
@@ -1159,7 +1170,7 @@
 		"bedge": "GuMo ➜ {user}",
 		"unknown": "➜ {user}",
 		"duration": "Dauer: {time}",
-		"message": "• Nachricht: {usermessage}",
+		"message": "• Nachricht: {userMessage}",
 		"return": {
 			"afk": "ist wieder da",
 			"bedge": "ist aus dem Bett gekommen",
