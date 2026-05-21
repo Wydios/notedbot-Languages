@@ -77,7 +77,7 @@
 				"invalidName": "{⛔ ➜|wydiosAngry} 7TV does not accept these characters",
 				"invalidSyntax": "{⛔ ➜|wydiosAngry} The name contains invalid characters. Shush, try using \\",
 				"stvDown": "{FeelsDankMan ➜|wydiosSad} 7TV is down",
-				"unknown": "{⚠️ ➜|wydiosStop} Unknown error No error case for: {error}"
+				"unknown": "{⚠️ ➜|wydiosStop} Unknown 7TV error"
 			},
 			"cosmetics": {
 				"presence": {
@@ -227,6 +227,15 @@
 			"enabled": "{FeelsOkayMan 👍|wydiosOk} {user|antiping} I will no longer ping you in messages",
 			"test": "{ping}"
 		},
+		"badge": {
+			"info": {
+				"badge": "{FeelsOkayMan 👍|wydiosOk} {badgeName} • {badgeDescription} • Preview: {badgeImage} • {badgeCount} own this badge",
+				"user": "{FeelsOkayMan 👍|wydiosOk} {userName} has the badge `{badgeName}` • {badgeDescription} • Preview: {badgeImage} • {badgeCount} own this badge",
+				"badges": "{FeelsOkayMan 👍|wydiosOk} {userName} currently owns a total of {badgeCount} badges • All badges: {links}"
+			},
+			"userHaveNoBadges": "{FeelsDankMan ➜|wydiosStop} {userName} has no badges",
+			"userHaveNoBadge": "{FeelsDankMan ➜|wydiosStop} {userName} has no active badge"
+		},
   		"ban": {
     		"success": {
       			"ban": "{FeelsOkayMan 👍|wydiosOk} {user} has been banned",
@@ -275,13 +284,13 @@
   				"list": "{FeelsOkayMan ➜|wydiosOk} Here are all custom permissions: {link}",
   				"listEmpty": "{FeelsDankMan ➜|wydiosStop} No custom permissions set"
 			},
-			"settings": "{FeelsOkayMan ➜|wydiosThink} Aktuelle Einstellungen • Prefix: {prefix} • Sprache: {lang} Blocked?: {block} • Mode: {mode} - Chat: {chat} (CONDUIT > IRC) • Stv-Reply: {stv} • Reminders: {reminders} • Notis-Reminders: {notis}",
+			"settings": "{FeelsOkayMan ➜|wydiosThink} Current Settings • Prefix: {prefix} • Language: {lang} Blocked?: {block} • Mode: {mode} - Chat: {chat} (CONDUIT > IRC) • Stv-Reply: {stv} • Reminders: {reminders} • Notis-Reminders: {notis}",
 			"mode": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {prefix}{trigger} <ai • modOnly • default(always) • onlineOnly • offlineOnly>",
 				"ai": {
-					"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} ai <on • off • personality> • Personality: {ai} • Aktivität: {modus}",
+					"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} ai <on • off • personality> • Personality: {ai} • Activity: {modus}",
   					"personality": {
-    					"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} ai personality <name> • Liste: {list}",
+    					"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} ai personality <name> • List: {list}",
     					"list": "{FeelsDankMan ➜|wydiosStop} Please use one of these personalities: {list}",
     					"change": "{FeelsOkayMan 🤖|wydiosOk} AI personality has been set to `{mode}`"
   					},
@@ -786,6 +795,10 @@
   			"changed": "{FeelsOkayMan 👍|wydiosOk} Permission for {user} has been set to `{rank}`"
 		},
 		"pick": "🎲 ➜ I choose `{choice}`",
+		"pin": {
+		    "noPinned": "{⚠️ ➜|wydiosStop} There is currently no pinned message",
+		    "unpinned": "{FeelsOkayMan ➜|wydiosOk} Pinned message removed"
+		},
 		"ping": {
   			"normal": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latency (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api}",
 			"dev": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latency (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Mod in {modCount} • 7TV in {stvCount}{affiliateText}{partnerText} • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api} • Subs: {allSubscriptions} (Cost: {cost}) • {serverMessage} Server: {serverDays}",
@@ -958,12 +971,12 @@
     		"error": "{FeelsBadMan|wydiosSad} I had an error while processing the request"
 		},
 		"user": {
-			"userbanned": {
+			"userBanned": {
 				"indefinite": "⛔ {user|antiping} is banned reason: TOS (Terms of Service) monkaS",
 				"temporary": "⛔ {user|antiping} is temporally banned reason: TOS (Terms of Service) monkaS",
 				"deactivated": "🌃 {user|antiping} ist Deaktiviert peepoSad",
 				"dmca": "copyThis {user|antiping} is banned reason: Digital Millennium Copyright Act Squid1 Squid2 Squid3 Squid4",
-				"chat": " • 🚫 Chat gesperrt",
+				"chat": " • 🚫 Chat Locked",
 				"nothing": "{user|antiping}",
 				"not": "{user|antiping} is not banned Saved"
 			},
@@ -1100,8 +1113,6 @@
 			}
 		},
 		"prefix": "{FeelsOkayMan 👍|wydiosOk} My channel prefix is `{prefix}`",
-		"stv": "DinoDance ➜ {user|antiping} Please install 7tv link: https://7tv.app/",
-		"sad": "{peepoSad|wydiosSad}",
 		"notification": {
 			"changelog": "imGlitch Developer Changelog has been updated • {link}",
 			"badge": {
@@ -1159,7 +1170,7 @@
 		"bedge": "GuMo ➜ {user}",
 		"unknown": "➜ {user}",
 		"duration": "Duration: {time}",
-		"message": "• Message: {usermessage}",
+		"message": "• Message: {userMessage}",
 		"return": {
 			"afk": "is back again",
 			"bedge": "just got out of bed",
