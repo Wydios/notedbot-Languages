@@ -57,7 +57,7 @@
 			"share": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} share <channel> <EmoteName/EmoteID/EmoteLink> <Optional: EmoteAlias> – Teile ein Emote in einen Anderen Channel",
 				"noPerms": "{🚫 ➜|wydiosPout} {user|antiping} Du brauchst 7TV Rechte im Channel {channel|antiping}",
-				"noPermsChannel": ", {channel|antiping} kann dich mit {prefix}7tveditor {user} ihn die Interne Liste hinzufügen lassen",
+				"noPermsChannel": ", {channel|antiping} kann dich mit {prefix}editor {user} ihn die Interne Liste hinzufügen lassen",
 				"noEmoteSet": "{⚠️ ➜|wydiosStop} Kein Emote-Set im Channel {channel|antiping} gefunden",
 				"noEmote": "{⚠️ ➜|wydiosStop} Emote ` {emoteName} ` wurden nicht gefunden",
 				"success": {
@@ -86,10 +86,6 @@
 					"notyou": "{🚫 ➜|wydiosPout} {user|antiping} Muss Selber Entscheiden ob der AutoPresence will. Sag ihn er Soll dafür {prefix}autopresence nutzen",
 					"nosub": "⚠️ Du bist keine Aktiver 7tv Sub",
 					"auto": "{BloodTrail|wydiosOk} AutoPresence {mode} 💡 Hinweis: Wenn dein 7TV Sub endet und du neu abonnierst, kann es bis zu 1 Stunde dauern, bis dein Presence wieder aktualisiert wird",
-					"noCosmetics": {
-						"user": "{⚠️ ➜|wydiosStop} {user|antiping} hat keine 7tv Cosmetics",
-						"self": "{⚠️ ➜|wydiosStop} Du hast keine 7tv Cosmetics"
-					},
 					"updated": "{(7TV) ➜|wydios7tv} Presence Updatet"
 				},
 				"badge": {
@@ -161,7 +157,7 @@
 			"noSet": "{🚫 ➜|wydiosPout} {channel|antiping} hat kein aktives Emote Set erstelle bitte eins: {link}",
 			"noActiveSet": "{🚫 ➜|wydiosPout} {channel|antiping} hat kein aktives Emote Set",
 			"ownedSet": "{🚫 ➜|wydiosPout} Das Emote Set gehört nicht zu deinem Channel und kann nicht angepasst werden",
-			"noPerms": "{🚫 ➜|wydiosPout} Du brauchst 7TV Rechte in diesem Channel oder {channel|antiping} added dich mit {prefix}7tveditor {user} ihn die Interne Liste",
+			"noPerms": "{🚫 ➜|wydiosPout} Du brauchst 7TV Rechte in diesem Channel oder {channel|antiping} added dich mit {prefix}editor {user} ihn die Interne Liste",
 			"noAcc": "{(7TV) ➜|wydios7tv} Kein 7TV Account für `{user}` gefunden",
 			"slots": " • {emoji}Noch {free} frei ({used}/{max})",
 			"link": {
@@ -169,8 +165,42 @@
 			    "emote": "{FeelsOkayMan|wydios7tv} ` {emote} ` ➜ {link} (CDN: 7tv.app zu cdn.7tv.app, emotes zu emote, + /1-4x.avif)"
 			}
 		},
+		"bttv": {
+			"add": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} add <EmoteName • EmoteId> [NeuerName] – fügt ein BTTV Emote hinzu",
+				"missingEmote": "{⚠️ ➜|wydiosStop} Bitte gib ein Emote oder eine Emote ID an",
+				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+				"invalidCode": "{⚠️ ➜|wydiosStop} Der Name ` {code} ` braucht mindestens 1 Großbuchstaben und 4 Zeichen",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` wurde erfolgreich hinzugefügt"
+			},
+			"remove": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} remove <EmoteName • EmoteId> – entfernt ein BTTV Emote",
+				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote `{emote}` wurde entfernt"
+			},
+			"rename": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} rename <EmoteName • EmoteId> <NeuerName>",
+				"missingName": "{⚠️ ➜|wydiosStop} Bitte gib einen neuen Namen an",
+				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+				"invalidCode": "{⚠️ ➜|wydiosStop} Der Name ` {code} ` braucht mindestens 1 Großbuchstaben und 4 Zeichen",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldName} ` wurde zu ` {newName} ` umbenannt"
+			},
+			"replace": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} replace <EmoteName • EmoteLink> <NeuesEmote • NeueEmoteId> – ersetzt ein BTTV Emote",
+				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+				"sameId": "{⚠️ ➜|wydiosStop} Das neue Emote ist bereits ` {emote} `",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emoteName} ` (alte ID: {oldId}) wurde mit ID ({newId}) replaced"
+			},
+			"error": {
+				"noPerms": "{🚫 ➜|wydiosPout} Ich habe keine Bttv-Rechte. Bitte füge {bot} als Editor: {link} hinzu",
+				"maxSets": "{⛔ ➜|wydiosAngry} Du hast das Maximale Limit vom Bttv Emote Sets erreicht",
+				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter Bttv Fehler"
+			},
+			"noPerms": "{🚫 ➜|wydiosPout} Du brauchst Bttv Rechte, {channel|antiping} added dich mit {prefix}editor {user} ihn die Interne Liste",
+			"noAcc": "{bttvNice ➜|wydiosStop} Kein Bttv Account für `{user}` gefunden"
+		},
 		"editors": {
-			"noList": "{⚠️ ➜|wydiosStop} Es gibt keine User ihn der internen Editor Liste du kannst Leute mit {prefix}7tveditor <username> hinzufügen",
+			"noList": "{⚠️ ➜|wydiosStop} Es gibt keine User ihn der internen Editor Liste du kannst Leute mit {prefix}editor <username> hinzufügen",
 			"list": "{FeelsOkayMan ➜|wydiosOk} Hier sind Alle internen Editors: {list}",
 			"remove": "{FeelsOkayMan ➜|wydiosOk} {user|antiping} wurde aus der internen Editor-Liste entfernt",
 			"add": "{FeelsOkayMan ➜|wydiosOk} {user|antiping} wurde zur internen Editor-Liste hinzugefügt"
@@ -452,6 +482,13 @@
 				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list – Entferne einen Custom Command",
 				"notExisting": "{⚠️ ➜|wydiosStop} Kein Custom Command mit dem Trigger `{trigger}` gefunden • Wenn du ein Command vergessen hast mach {prefix}cc list",
 				"removed": "{FeelsOkayMan 👍|wydiosOk} Der Custom Command `{trigger}` wurde gelöscht"
+			},
+			"yoink": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} <channel> <trigger> • Klaue einen Custom Command aus einem anderen Channel",
+				"existing": "{🚫 ➜|wydiosPout} Du besitzt bereits einen Command mit dem Trigger `{trigger}`",
+				"notFound": "{⚠️ ➜|wydiosStop} Kein Command mit dem Trigger `{trigger}` bei `{channel}` gefunden",
+				"invalid": "{⛔ ➜|wydiosAngry} Der Command besitzt keine gültige Nachricht",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Der Command `{trigger}` wurde erfolgreich von `{channel}` geklaut"
 			},
 			"noList": "{⚠️ ➜|wydiosStop} Es gibt keine Custom Commands füge welche mit {prefix}addcmd hinzu",
 			"list": "{FeelsOkayMan 👉|wydiosOk} Es gibt {custom} Custom Commands {list}",
@@ -940,6 +977,10 @@
 			"error": "{⚠️ ➜|wydiosStop} Es gibt den Vorschlag/Report schon",
 			"creat": "{peepoHappy PETPET|wydiosLove} Danke für deinen Vorschlag/Report wir bearbeiten ihn so schnell wie möglich (ID: {id})"
 		},
+		"team": {
+			"notFound": "{⚠️ ➜|wydiosStop} Team `{name}` wurde nicht gefunden",
+			"msg": "{FeelsDankMan ➜|wydiosBased} Team `{name}` von {owner} • Mitglieder: {members} ({liveMembers} live) • Logo: {logo} • Banner: {banner} - Hintergrund: {backgroundBanner} • Seite: {page}"
+		},
 		"test": {
 			"fail": "{❌|wydiosSad} Der Test hat nicht geklappt WineTime",
 			"success": "{✅|wydiosLove} Der Test hat geklappt Clap"
@@ -997,6 +1038,8 @@
 			"createdAt": " • Erstellt am: {createdAt}",
 			"followers": " • Followers: {followers}",
 			"follows": " • Follows: {follows}",
+			"chatters": " • Chatters: {chatters}",
+			"team": " • Team: {team}",
 			"prefix": " • Prefix: {prefix}",
 			"profile": {
 				"bttv": " • bttv {bttv}",
