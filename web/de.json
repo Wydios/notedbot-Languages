@@ -122,18 +122,18 @@
             "me": "/me Stil"
         },
         "editor": {
-            "title": "7tv Editor",
-            "description": "Verwalte deine 7tv Editors",
-            "existing": "Dieser User ist schon Editor",
-            "noList": "Keine 7tv Editors gerade",
-            "cancel": "Abruch",
-            "add": "Füge 7tv Editor hinzu",
-            "zb": "z.b Wydios",
-            "delete": "Löschen"
+            "title": "Interne Editoren",
+            "description": "Verwalte die internen Editoren deines Bots",
+            "existing": "Dieser Nutzer ist bereits ein interner Editor",
+            "noList": "Aktuell gibt es keine internen Editoren",
+            "cancel": "Abbrechen",
+            "add": "Internen Editor hinzufügen",
+            "zb": "z. B. Wydios",
+            "delete": "Entfernen"
         },
         "ambassador": {
             "title": "Ambassadors",
-            "description": "Verwalte deine Ambassadors",
+            "description": "Verwalte deine Ambassadors (Bot Intern)",
             "existing": "Dieser User ist schon Ambassador",
             "noList": "Keine Ambassadors gerade",
             "cancel": "Abbruch",
@@ -149,7 +149,7 @@
             "delete": "Löschen",
             "create": "Command erstellen",
             "save": "Speichern",
-            "showAll": "Alle anzeigen ({{count}})",
+            "showAll": "Alle anzeigen (+{count})",
             "showLess": "Weniger anzeigen",
             "editTitle": "Command bearbeiten",
             "createTitle": "Command erstellen",
@@ -176,8 +176,8 @@
         "behavior": {
             "title": "Fortschrittlich Einstellungen",
             "description": "Verwalte Weiter Settings vom Bot",
-            "mod_only": "Nur für Moderatoren",
-            "reply_to_stv": "Widerholt 7tv Emotes",
+            "mod_only": "Bot Nur für Moderatoren",
+            "reply_to_stv": "Wiederholt 7tv Emotes",
             "activity_mode": "Aktivität's Mode",
             "live": "Live Only",
             "offline": "Offline Only",
