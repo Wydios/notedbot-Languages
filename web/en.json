@@ -97,7 +97,7 @@
     },
     "dashboard": { 
         "login": "Hit the button below and let the magic happen",
-        "noUser": "No data found for you. Try sending a message in a chat where NotedBot is activn",
+        "noUser": "No data found for you. Try sending a message in a chat where NotedBot is active",
         "available": {
             "live": {
                 "channel": "Bot in chat",
@@ -120,18 +120,18 @@
             "description": "Control which notifications NotedBot sends in your channel."
         },
         "editor": {
-            "title": "7TV Editors",
-            "description": "Manage your 7TV editors",
+            "title": "Internal Editors",
+            "description": "Manage your internal editors (Bot Intern)",
             "existing": "This user is already an editor",
-            "noList": "No 7TV editors right now",
+            "noList": "No internal editors right now",
             "cancel": "Cancel",
-            "add": "Add 7TV Editor",
+            "add": "Add Internal Editor",
             "zb": "e.g. Wydios",
             "delete": "Delete"
         },
         "ambassador": {
             "title": "Ambassadors",
-            "description": "Manage your ambassadors",
+            "description": "Manage your ambassadors (Bot Intern)",
             "existing": "This user is already an ambassador",
             "noList": "No ambassadors right now",
             "cancel": "Cancel",
@@ -147,7 +147,7 @@
             "delete": "Delete",
             "create": "Create Command",
             "save": "Save",
-            "showAll": "Show All ({{count}})",
+            "showAll": "Show All (+{count})",
             "showLess": "Show Less",
             "editTitle": "Edit Command",
             "createTitle": "Create Command",
@@ -174,7 +174,7 @@
         "behavior": {
             "title": "Advanced Settings",
             "description": "Manage additional bot settings",
-            "mod_only": "Only for Moderators",
+            "mod_only": "Bot Only for Moderators",
             "reply_to_stv": "Repeat 7TV Emotes",
             "activity_mode": "Activity Mode",
             "live": "Live Only",
