@@ -57,7 +57,7 @@
 			"share": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} share <Channel> <EmoteName/EmoteID/EmoteLink> <Optional: EmoteAlias> – shares an emote to another channel",
 				"noPerms": "{🚫 ➜|wydiosPout} {user|antiping} You need 7TV editor permissions in channel {channel|antiping}",
-				"noPermsChannel": ", {channel|antiping} can add you to their internal list using {prefix}7tveditor {user}",
+				"noPermsChannel": ", {channel|antiping} can add you to their internal list using {prefix}editor {user}",
 				"noEmoteSet": "{⚠️ ➜|wydiosStop} No emote set found in channel {channel|antiping}",
 				"noEmote": "{⚠️ ➜|wydiosStop} Emote ` {emoteName} ` not found",
 				"success": {
@@ -86,10 +86,6 @@
 					"notyou": "{🚫 ➜|wydiosPout} {user|antiping} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
 					"nosub": "⚠️ You don’t have an active 7TV subscription",
 					"auto": "{BloodTrail|wydiosOk} AutoPresence {mode} 💡 Note: If your 7TV subscription ends and you resubscribe, it may take up to 1 hour for your presence to update again",
-					"noCosmetics": {
-						"user": "{⚠️ ➜|wydiosStop} {user|antiping} has no 7tv cosmetics",
-						"self": "{⚠️ ➜|wydiosStop} You have no 7tv cosmetics"
-					},
     				"updated": "{(7TV) ➜|wydios7tv} Presence Updated"
   				},
 				"badge": {
@@ -161,7 +157,7 @@
 			"noSet": "{🚫 ➜|wydiosPout} {channel|antiping} Doesn't have an active emote set, please create one: {link}",
 			"noActiveSet": "{🚫 ➜|wydiosPout} {channel|antiping} Doesn't have an active emote set",
 			"ownedSet": "{🚫 ➜|wydiosPout} The emote set does not belong to deisen channel and cannot be adjusted",
-			"noPerms": "{🚫 ➜|wydiosPout} You need 7TV permissions in this channel or {channel|antiping} can add you to the internal list with {prefix}7tveditor {user}",
+			"noPerms": "{🚫 ➜|wydiosPout} You need 7TV permissions in this channel or {channel|antiping} can add you to the internal list with {prefix}editor {user}",
 			"noAcc": "{(7TV) ➜|wydios7tv} No 7TV account found for `{user}`",
 			"slots": " • {emoji}{free} slots left ({used}/{max})",
 			"link": {
@@ -169,8 +165,42 @@
 			    "emote": "{FeelsOkayMan|wydios7tv} ` {emote} ` ➜ {link} (CDN: 7tv.app to cdn.7tv.app, emotes to emote, + /1-4x.avif)"
 			}
 		},
+		"bttv": {
+			"add": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} add <EmoteName • EmoteId> [NewName] – adds a BTTV emote",
+				"missingEmote": "{⚠️ ➜|wydiosStop} Please provide an emote or emote ID",
+				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
+				"invalidCode": "{⚠️ ➜|wydiosStop} The name ` {code} ` needs at least 1 capital letter and 4 characters",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` was added successfully"
+			},
+			"remove": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} remove <EmoteName • EmoteId> – removes a BTTV emote",
+				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote `{emote}` was removed"
+			},
+			"rename": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} rename <EmoteName • EmoteId> <NewName>",
+				"missingName": "{⚠️ ➜|wydiosStop} Please provide a new name",
+				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
+				"invalidCode": "{⚠️ ➜|wydiosStop} The name ` {code} ` needs at least 1 capital letter and 4 characters",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldName} ` was renamed to ` {newName} `"
+			},
+			"replace": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} replace <EmoteName • EmoteLink> <NewEmote • NewEmoteId> – replaces a BTTV emote",
+				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
+				"sameId": "{⚠️ ➜|wydiosStop} The new emote is already ` {emote} `",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emoteName} ` (old ID: {oldId}) was replaced with ID ({newId})"
+			},
+			"error": {
+				"noPerms": "{🚫 ➜|wydiosPout} I don't have BTTV permissions. Please add {bot} as an editor: {link}",
+				"maxSets": "{⛔ ➜|wydiosAngry} You have reached the maximum limit for BTTV emote sets",
+				"unknown": "{⚠️ ➜|wydiosStop} Unknown BTTV error"
+			},
+			"noPerms": "{🚫 ➜|wydiosPout} You need BTTV permissions, {channel|antiping} needs to add you with {prefix}editor {user} to the internal editor list",
+			"noAcc": "{bttvNice ➜|wydiosStop} No BTTV account found for `{user}`"
+		},
 		"editors": {
-   			"noList": "{⚠️ ➜|wydiosStop} There are no users in the internal editor list. You can add users with {prefix}7tveditor <username>",
+   			"noList": "{⚠️ ➜|wydiosStop} There are no users in the internal editor list. You can add users with {prefix}editor <username>",
    			"list": "{FeelsOkayMan ➜|wydiosOk} Here are all internal editors: {list}",
    			"remove": "{FeelsOkayMan ➜|wydiosOk} {user|antiping} has been removed from the internal editor list",
    			"add": "{FeelsOkayMan ➜|wydiosOk} {user|antiping} has been added to the internal editor list"
@@ -453,6 +483,13 @@
 		        "notExisting": "{⚠️ ➜|wydiosStop} No custom command found with the trigger `{trigger}` • If you forgot a command use {prefix}cc list",
 		        "removed": "{FeelsOkayMan 👍|wydiosOk} The custom command `{trigger}` was removed"
 		    },
+			"yoink": {
+				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} <channel> <trigger> • Steal a custom command from another channel",
+				"existing": "{🚫 ➜|wydiosPout} You already have a command with the trigger `{trigger}`",
+				"notFound": "{⚠️ ➜|wydiosStop} No command with the trigger `{trigger}` found in `{channel}`",
+				"invalid": "{⛔ ➜|wydiosAngry} The command does not contain a valid message",
+				"success": "{FeelsOkayMan 👍|wydiosOk} The command `{trigger}` was successfully stolen from `{channel}`"
+			},
 		    "noList": "{⚠️ ➜|wydiosStop} There are no custom commands. Add some using {prefix}addcmd",
 		    "list": "{FeelsOkayMan 👉|wydiosOk} There are {custom} custom commands {list}",
 		    "prefix": "{BigSad ➜|wydiosSad} My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
@@ -940,6 +977,10 @@
 			"error": "{⚠️ ➜|wydiosStop} The suggestion/report already exists",
 			"creat": "{peepoHappy PETPET|wydiosLove} Thanks for a suggestion/report We'll process it as quickly as possible (ID: {id})"
 		},
+		"team": {
+			"notFound": "{⚠️ ➜|wydiosStop} Team `{name}` was not found",
+			"msg": "{FeelsDankMan ➜|wydiosBased} Team `{name}` by {owner} • Members: {members} ({liveMembers} live) • Logo: {logo} • Banner: {banner} • Background: {backgroundBanner} • Page: {page}"
+		},
 		"test": {
 			"fail": "{❌|wydiosSad} The test failed WineTime",
 			"success": "{✅|wydiosLove} The test was successful Clap"
@@ -997,6 +1038,8 @@
 			"createdAt": " • Created at: {createdAt}",
 			"followers": " • Followers: {followers}",
 			"follows": " • Follows: {follows}",
+			"chatters": " • Chatters: {chatters}",
+			"team": " • Team: {team}",
 			"prefix": " • Prefix: {prefix}",
 			"profile": {
 				"bttv": " • bttv {bttv}",
