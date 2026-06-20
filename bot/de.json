@@ -38,12 +38,7 @@
 			"yoink": {
 				"usage": "{FeelsDankMan ➜ |wydiosStop} Bitte schreibe {usage} yoink <Channel> <EmoteName> <Optional: EmoteAlias> – Yoinke ein Emote von einen Anderen Channel",
 				"self": "{⛔ ➜|wydiosAngry} Du kannst deine eigenen Emotes nicht yoinken da sie hier sind",
-				"noFound": {
-					"base": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` nicht im",
-					"default": " Channel {channel|antiping} gefunden",
-					"ffz": " 7tv set gefunden • FrankerZ Clap Das Emote ist ein FFZ Emote • {url}",
-					"bttv": " 7tv set gefunden • FeelsAmazingMan Clap Das Emote ist ein BTTV Emote • {url}"
-				},
+				"noFound": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` nicht im Channel {channel|antiping} gefunden",
 				"nameConflict": "{⛔ ➜|wydiosAngry} Der Emote Name ` {emote} ` ist in deinem Channel schon besetzt",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` von Channel {channel|antiping} geyoinkt",
 				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich geyoinkt"
@@ -86,7 +81,7 @@
 					"notyou": "{🚫 ➜|wydiosPout} {user|antiping} Muss Selber Entscheiden ob der AutoPresence will. Sag ihn er Soll dafür {prefix}autopresence nutzen",
 					"nosub": "⚠️ Du bist keine Aktiver 7tv Sub",
 					"auto": "{BloodTrail|wydiosOk} AutoPresence {mode} 💡 Hinweis: Wenn dein 7TV Sub endet und du neu abonnierst, kann es bis zu 1 Stunde dauern, bis dein Presence wieder aktualisiert wird",
-					"updated": "{(7TV) ➜|wydios7tv} Presence Updatet"
+					"updated": "{(7TV) ➜|wydios7tv} Presence Updated"
 				},
 				"badge": {
 					"info": "{(7TV) ➜|wydios7tv} Badge: {badgeName} • Badge ID: {badgeId} • Beschreibung {badgeDescription} • Vorschau: {preview} • {activeCount} nutzen dieses Badge aktiv • {inventoryCount} besitzen dieses Badge",
@@ -111,8 +106,9 @@
 				"subEnd": " • Sub endet in {subEnd}"
 			},
 			"set": {
-				"free": "{(7TV) ➜|wydios7tv} {channel|antiping} hat noch {availableSlots} Emote Plätze frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
-  				"full": "{(7TV) ➜|wydios7tv} {channel|antiping} hat keine Emote Plätze mehr frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}"
+				"free": "{(7TV)|wydios7tv} {channel|antiping} hat noch {stvAvailableSlots} Emote Plätze frei • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}",
+  				"full": "{(7TV)|wydios7tv} {channel|antiping} hat keine Emote Plätze mehr frei • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}",
+				"compact": "{(7TV)|wydios7tv} • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}"
 			},
 			"notOwnedSet": "⚠️ Actual owner: {owner}",
 			"setpaint": {
@@ -162,43 +158,88 @@
 			"slots": " • {emoji}Noch {free} frei ({used}/{max})",
 			"link": {
 			    "noEmote": "{FeelsDankMan|wydiosSad} Emote ` {emote} ` nicht im Set gefunden",
-			    "emote": "{FeelsOkayMan|wydios7tv} ` {emote} ` ➜ {link} (CDN: 7tv.app zu cdn.7tv.app, emotes zu emote, + /1-4x.avif)"
+			    "emote": "{FeelsOkayMan|wydios7tv} ` {emote} ` ➜ {normalLink} CDN Link: • {cdnLink} (Größe 1-4)"
 			}
 		},
 		"bttv": {
 			"add": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} add <EmoteName • EmoteId> [NeuerName] – fügt ein BTTV Emote hinzu",
-				"missingEmote": "{⚠️ ➜|wydiosStop} Bitte gib ein Emote oder eine Emote ID an",
 				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
 				"invalidCode": "{⚠️ ➜|wydiosStop} Der Name ` {code} ` braucht mindestens 1 Großbuchstaben und 4 Zeichen",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` wurde erfolgreich hinzugefügt"
 			},
 			"remove": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} remove <EmoteName • EmoteId> – entfernt ein BTTV Emote",
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} remove <EmoteName> – entfernt ein BTTV Emote",
 				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote `{emote}` wurde entfernt"
 			},
 			"rename": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} rename <EmoteName • EmoteId> <NeuerName>",
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} rename <EmoteName> <NeuerName>",
 				"missingName": "{⚠️ ➜|wydiosStop} Bitte gib einen neuen Namen an",
 				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
 				"invalidCode": "{⚠️ ➜|wydiosStop} Der Name ` {code} ` braucht mindestens 1 Großbuchstaben und 4 Zeichen",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldName} ` wurde zu ` {newName} ` umbenannt"
 			},
 			"replace": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} replace <EmoteName • EmoteLink> <NeuesEmote • NeueEmoteId> – ersetzt ein BTTV Emote",
+				"usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} replace <EmoteName> <NeuesEmote • NeueEmoteId • EmoteLink> – ersetzt ein BTTV Emote",
 				"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
 				"sameId": "{⚠️ ➜|wydiosStop} Das neue Emote ist bereits ` {emote} `",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emoteName} ` (alte ID: {oldId}) wurde mit ID ({newId}) replaced"
 			},
+			"yoink": {
+				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich geyoinkt"
+			},
 			"error": {
+				"token": "💡 ➜ Tut mir leid, aber mein bttv Token ist abgelaufen, wenn dieser Fehler weiterhin besteht, informiere bitte einen Admin",
 				"noPerms": "{🚫 ➜|wydiosPout} Ich habe keine Bttv-Rechte. Bitte füge {bot} als Editor: {link} hinzu",
 				"maxSets": "{⛔ ➜|wydiosAngry} Du hast das Maximale Limit vom Bttv Emote Sets erreicht",
 				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter Bttv Fehler"
 			},
+			"set": {
+				"free": "bttvNice {channel|antiping} hat noch {bttvAvailableSlots} Emote Plätze frei • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
+				"full": "bttvNice {channel|antiping} hat keine Emote Plätze mehr frei • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
+				"compact": "bttvNice • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}"
+			},
 			"noPerms": "{🚫 ➜|wydiosPout} Du brauchst Bttv Rechte, {channel|antiping} added dich mit {prefix}editor {user} ihn die Interne Liste",
-			"noAcc": "{bttvNice ➜|wydiosStop} Kein Bttv Account für `{user}` gefunden"
+			"noAcc": "{bttvNice ➜|wydiosStop} Kein Bttv Account für `{user}` gefunden",
+			"slots": " • {emoji}Noch {free} frei ({used}/{max})"
 		},
+		"ffz": {
+			"add": {
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} add <EmoteName • EmoteId> [NeuerName] – fügt ein FFZ Emote hinzu",
+			    "notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+			    "success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` wurde erfolgreich hinzugefügt"
+			},
+			"remove": {
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} remove <EmoteName> – entfernt ein FFZ Emote",
+			    "notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+			    "success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` wurde erfolgreich entfernt"
+			},
+			"rename": {
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Bitte schreibe {usage} rename <EmoteName> <NeuerName> – benennt ein FFZ Emote um",
+    			"notFound": "{⚠️ ➜|wydiosStop} Kein Emote mit dem Namen ` {emote} ` gefunden",
+    			"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` wurde erfolgreich umbenannt"
+			},
+			"yoink": {
+				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich geyoinkt"
+			},
+			"error": {
+				"token": "💡 ➜ Tut mir leid, aber mein ffz Token ist abgelaufen, wenn dieser Fehler weiterhin besteht, informiere bitte einen Admin",
+				"noPerms": "{🚫 ➜|wydiosPout} Ich habe keine ffz-Rechte. Bitte füge {bot} als Editor: {link} hinzu",
+				"maxSets": "{⛔ ➜|wydiosAngry} Du hast das Maximale Limit vom ffz Emote Sets erreicht",
+				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter ffz Fehler"
+			},
+			"set": {
+				"noSet": "{⛔ ➜|wydiosThink} {channel|antiping} hat kein ffz Emote Set",
+				"free": "FrankerZ {channel|antiping} hat noch {ffzAvailableSlots} Emote Plätze frei • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
+				"full": "FrankerZ {channel|antiping} hat keine Emote Plätze mehr frei • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
+				"compact": "FrankerZ • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}"
+			},
+			"noPerms": "{🚫 ➜|wydiosPout} Du brauchst ffz Rechte, {channel|antiping} added dich mit {prefix}editor {user} ihn die Interne Liste",
+			"noAcc": "{FrankerZ ➜|wydiosStop} Kein ffz Account für `{user}` gefunden",
+			"slots": " • {emoji}Noch {free} frei ({used}/{max})"
+		},
+		"StvBttvFfzSetStart": "{channel|antiping} hat noch ({stvFree} • {bttvFree} • {ffzFree} = {totalFree}) Emote Plätze frei",
 		"editors": {
 			"noList": "{⚠️ ➜|wydiosStop} Es gibt keine User ihn der internen Editor Liste du kannst Leute mit {prefix}editor <username> hinzufügen",
 			"list": "{FeelsOkayMan ➜|wydiosOk} Hier sind Alle internen Editors: {list}",
@@ -296,8 +337,14 @@
 		"channel": {
 			"emotes": {
 				"noEmotes": "{FeelsDankMan ➜|wydiosStop} Ich habe keine Emotes gefunden",
-				"start": "{FeelsOkayMan ➜|wydiosOk} Hier sind alle {list} Emotes (Count: {count} • {details}) in diesem Channel:"
+				"stats": "{FeelsDankMan|wydiosOk} Emote Stats (Count: {count} • {details}) • Cache refresh in {cache}"
 			},
+			"reload": {
+    		    "msg": "{♻️|wydiosDebug} Channel Emote Cache neu geladen",
+    		    "new": "{count} New Emote{plural}",
+    		    "removed": "{count} Removed Emote{plural}",
+    		    "renamed": "{count} Renamed Emote{plural}"
+    		},
 			"lang": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Aktueller Sprache `{lang}` zum ändern {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
 				"change": "{FeelsOkayMan 👍|wydiosOk} Die Sprache wurde auf {lang} gesetzt • um alle Commands zu sehen mach {prefix}commands",
@@ -338,7 +385,7 @@
 				}
 			}
 		},
-		"chatterino": "{FeelsDankMan ➜|wydiosOk} Alle Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino} • Leafyrino: {leafyrino}",
+		"chatterino": "{FeelsDankMan ➜|wydiosOk} Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Leafyrino: {leafyrino} • Moltorino: {moltorino}",
 		"chatters": "Es sind gerade {count} User im Chat {channel}",
 		"noChatters": "{⚠️ ➜|wydiosStop} Keine Chatters gefunden",
 		"checkname": {
@@ -444,7 +491,7 @@
 				"stvCosmetics": {
 					"start": "ppHop ➜ Scraper Startet mit {users} Usern...",
 					"stop": "ppHop ➜ Scraper wird beendet...",
-					"final": "{FeelsOkayMan ➜|wydiosBased} Scraper beendet. {users} Users geupdatet • {newPaints} neue Paints • {newBadges} neue Badges • Dauer: {duration}"
+					"final": "{FeelsOkayMan ➜|wydiosBased} Scraper beendet. {users} Users geupdated • {newPaints} neue Paints • {newBadges} neue Badges • Dauer: {duration}"
 				}
 			},
 			"stv": {
@@ -1159,12 +1206,12 @@
 		"notification": {
 			"changelog": "imGlitch Developer Changelogs wurde aktualisiert • {link}",
 			"badge": {
-				"newBadge": "imGlitch Neues Global Badge ➜ {badgeName}",
-				"removedBadge": "imGlitch Global Badge entfernt ➜ {badgeName}"
+				"newBadge": "imGlitch Neues Badge ➜ {badgeName}",
+				"removedBadge": "imGlitch Badge entfernt ➜ {badgeName}"
 			},
 			"emote": {
-				"newEmote": "imGlitch Neues Global Emote ➜ {emoteName}",
-				"removedEmote": "imGlitch Global Emote entfernt ➜ {emoteName}"
+				"newEmote": "imGlitch Neues Emote ➜ {emoteName}",
+				"removedEmote": "imGlitch Emote entfernt ➜ {emoteName}"
 			},
 			"stv": {
 				"newBadge": "(7TV) Neues 7tv Badge ➜ {badgeName}",
