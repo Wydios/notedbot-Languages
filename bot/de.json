@@ -1018,7 +1018,7 @@
 			"founder": "• Founder",
 			"end": "{FeelsDankMan ➜|wydiosOk} {user|antiping} war Sub im Channel {channel|antiping} für {time} Monate • Sub ist {ago} Tage her",
 			"is": "{FeelsDankMan ➜|wydiosOk} {user|antiping} ist Sub seit {months} Monaten bei {channel|antiping} • Tier {tier}{prime} • Sub {renew}{timePart} • Streak: {streak} Monate",
-			"gifted": " • HolidayPresent Geschenkt von: @{giftedBy|antiping}"
+			"gifted": " • HolidayPresent Geschenkt von: {giftedBy|antiping}"
 		},
 		"suggest": {
 			"error": "{⚠️ ➜|wydiosStop} Es gibt den Vorschlag/Report schon",
