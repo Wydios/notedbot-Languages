@@ -212,22 +212,32 @@
             "permission": "Your current NotedBot role"
         },
         "safe": {
-            "title": "Safe Area",
-            "description": "Here you can re-add NotedBot to your channel.",
-            "status": "Active",
-            "me": "/me Style"
+            "title": "Security Area",
+            "rejoin": {
+                "title": "Reconnect Bot",
+                "description": "Reconnects NotedBot with your channel.",
+                "done": "Reconnect"
+            },
+            "right": {
+                "title": "Grant More Permissions",
+                "description": "Enable additional permissions for more bot features.",
+                "done": "Enable Permissions"
+            }
         },
         "danger": {
             "title": "Danger Zone",
-            "description": "If you remove the bot, ALL your data will be permanently deleted.\n\nThis includes:\n• Custom commands\n• Command settings (enabled/disabled)\n• Live notifications\n• 7TV / Twitch features (badges, emotes, paints)\n• Reminders & stored data\n\nFor security, you will receive a code that you must enter.\nAfter removal, you will be automatically logged out."
-        },
-        "remove": {
-            "title": "Are you <span style='color: var(--text-primary)'>REALLY</span> sure?",
-            "description": "To confirm removing NotedBot, type <strong class='dashboard-confirm-highlight'>{{code}}</strong> below. ⚠ This action CANNOT be undone."
-        },
-        "logout": {
-            "title": "Logout",
-            "description": "Log out of this website."
+            "part": {
+                "title": "Remove Bot",
+                "description": "If you remove the bot, ALL of your data will be permanently deleted.\n\nThis includes:\n• Custom Commands\n• Command settings (enabled/disabled)\n• Live notifications\n• 7TV / Twitch features (badges, emotes, paints)\n• Reminders & saved data\n\nFor security, you will receive a code that you must enter.\nAfter removal, you will be automatically logged out.",
+                "remove": {
+                    "title": "Are you <span style='color: var(--text-primary)'>REALLY</span> sure?",
+                    "description": "If you really want to remove NotedBot, enter <strong className='dashboard-confirm-highlight'>{{code}}</strong> below. ⚠ This action CANNOT be undone"
+                }
+            },
+            "logout": {
+                "title": "Log out",
+                "description": "Log out from this website. Don't worry, NotedBot will continue to work afterwards."
+            }
         }
     }
 }
