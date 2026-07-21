@@ -1,188 +1,190 @@
 {
-    "home": { // Note an mich hab kacke gemacht 
+    "home": {
         "subtitles": {
-            "0": "NotedBot, a Twitch chatbot like any other... or maybe not?",
-            "1": "Ready to boost your chat into hyperdrive? 🚀",
-            "2": "A bot that does more than just {prefix}ping – guaranteed ⚙️",
-            "3": "Not your standard bot – NotedBot brings the extra power ⚡",
-            "4": "More than just a bot – your all-rounder 🎯",
-            "5": "Like a protocol droid, but way cooler 🤖"
+            "0": "NotedBot ein Twitch Chatbot wie jeder andere … oder doch nicht?",
+            "1": "Bereit, deinen Chat auf Hyperantrieb zu bringen? 🚀",
+            "2": "Ein Bot, der mehr kann als nur {prefix}ping – versprochen ⚙️",
+            "3": "Kein Standard-Bot – NotedBot bringt die Extra-Power ⚡",
+            "4": "Nicht einfach nur ein Bot – sondern dein Alleskönner 🎯",
+            "5": "Fast wie ein Protokolldroide, nur cooler 🤖"
         },
         "feature": {
             "cloud": {
                 "title": "Cloud Hosting",
-                "description": "No setup required. NotedBot runs 24/7 on a dedicated root server."
+                "description": "Kein Einrichten. NotedBot läuft 24/7 auf einem Root Server."
             },
             "type": {
                 "title": "Modern Programming Language",
-                "description": "NotedBot is written in TypeScript and built with modern technologies."
+                "description": "NotedBot ist in TypeScript geschrieben und nutzt moderne Technologien."
             },
             "stv": {
                 "title": "7TV Integration",
-                "description": "NotedBot supports 7TV Commands for managing Emotes."
+                "description": "NotedBot unterstützt 7TV Commands zum Verwalten von Emotes."
             },
             "notis": {
-                "title": "Notis System",
-                "description": "Collect Notis, trade them, and claim the #1 spot on the Notis leaderboard!"
+                "title": "Notis-System",
+                "description": "Sammle Notis, handle mit ihnen und erobere Platz 1 der Notis-Rangliste!"
             }
         },
         "twitch": {
             "try": {
-                "title": "Try It Now",
-                "description": "Check out the NotedBot Twitch chat on the right. Prefix: {prefix}"
+                "title": "Teste Es Aus",
+                "description": "Hier Rechts ist der Twitch Chat von NotedBot. Prefix: {prefix}"
             },
             "title": {
-                "is": "Customize NotedBot the way you want",
-                "isNot": "Ready to get started, boss?"
+                "is": "Personalisiere NotedBot, wie du es willst",
+                "isNot": "Bereit zum Starten, Chef?"
             },
             "description": {
-                "is": "Customize NotedBot to your needs and control all features easily from the dashboard.",
-                "isNot": "Connect your Twitch account and let NotedBot join your channel. So what are you waiting for? Take your stream to the next level."
+                "is": "Passe NotedBot an deine Bedürfnisse an und kontrolliere alle Features einfach im Dashboard.",
+                "isNot": "Verbinde deinen Twitch-Account und lass NotedBot deinem Channel beitreten. Also worauf wartest du? Bring deinen Stream aufs nächste Level."
             },
-            "hint": "*The bot will automatically join your channel after logging in. Please make sure that NotedBot is not banned and has moderator status."
+            "hint": "*Der Bot wird automatisch deinem Channel beitreten nach dem Einloggen. Bitte Achte darauf das NotedBot nicht gebannt ist und Moderator Status besitzt"
         },
-        "trust": "Trusted Users"
+        "trust": "Vertrauenswürdige Benutzer"
     },
     "commands": {
         "subtitles": {
-            "0": "Here are all NotedBot commands. Search or filter by commands",
-            "1": "The secret tools for your daily chat grind 🧰",
-            "2": "Your command arsenal – locked and loaded 🚀",
-            "3": "From {prefix}ping to {prefix}notis – everything I can do is right here 🍷",
-            "4": "Level up your chat with the best NotedBot commands ✨",
-            "5": "True power lies in your commands 🔮"
+            "0": "Hier sind Alle NotedBot Commands Suche oder filter nach commands",
+            "1": "Die geheimen Tools für deinen Chat-Alltag 🧰",
+            "2": "Dein Arsenal an Commands – bereit zum Starten 🚀",
+            "3": "Ob {prefix}ping oder {prefix}notis – hier steht, was ich kann 🍷",
+            "4": "Level up deinen Chat mit den besten NotedBot Commands ✨",
+            "5": "Die wahre Macht liegt in deinen Befehlen 🔮"
         },
-        "search": "🔎 Search for a command?",
-        "perms": "Any Access",
-        "category": "All Category",
+        "search": "🔎 Suchen nach einem Command?",
+        "perms": "Alle Zugriffe",
+        "category": "Alle Kategorien",
         "details": {
-            "back": "Back to Commands",
-            "usage": "Usage",
-            "description": "Description",
-            "category": "Categorie",
-            "supports": "Supports"
+            "back": "Zurück zu Commands",
+            "usage": "Benutzung",
+            "description": "Beschreibung",
+            "category": "Kategorie",
+            "supports": "Unterstützt"
         },
-        "noFound": "No command found. Try a different search, filter, or category."
+        "noFound": "Keinen Command gefunden. Versuch es mit einer Anderen Suche, Filter oder Categorie mal"
     },
     "stats": {
         "subtitles": {
-            "0": "Here you can find all statistics about NotedBot",
-            "1": "More transparent than a Jedi ghost 👻",
-            "2": "Everything’s out in the open – see what’s going on 🤖",
-            "3": "What the bot knows, everyone knows 🕵️",
-            "4": "Nothing stays hidden – Notis never lie 📈",
-            "5": "A look behind the scenes – global, live, relentless 🫣"
+            "0": "Hier findest du alle Statistiken zu NotedBot",
+            "1": "Transparenter als ein Jedi-Geist 👻",
+            "2": "Alles offen – hier siehst du, was Sache ist 🤖",
+            "3": "Was der Bot weiß, weiß jetzt jeder 🕵️",
+            "4": "Nichts bleibt verborgen – die Notis lügen nicht 📈",
+            "5": "Der Blick hinter die Kulissen – global, live, gnadenlos 🫣"
         },
-        "connection": "Real-time Connection",
+        "connection": "Echtzeit Verbindung",
         "commands": {
-            "available": "Available Commands",
-            "executed": "Executed Commands"
+            "available": "Verfügbare Commands",
+            "executed": "Ausgeführte Commands"
         },
         "totals": {
-            "commands": "Commands Executed",
-            "chatters": "Unique Chatters",
-            "afks": "Currently AFK Users",
-            "reminders": "Active Reminders",
-            "notis": "Notis players"
+            "commands": "Ausgeführte Commands",
+            "chatters": "Einzigartige Chatters",
+            "afks": "Aktive Afks",
+            "reminders": "Aktive Erinnerungen",
+            "notis": "Notis Spieler"
         },
         "notis": {
-            "players": "Players",
-            "total": "Total Notis",
-            "give_get": "Notis Give/Get",
-            "gamble": "Gamble Wins/Loss",
-            "gamble_notis": "Gamble Wins/Losses (Notis Count)",
-            "crates": "Crates Found",
-            "winrate": "Winrate"
+            "players": "Spieler",
+            "total": "Notis insgesamt",
+            "give_get": "Notis geben/erhalten",
+            "gamble": "Gamble Gewinne/Verluste",
+            "gamble_notis": "Gamble Gewinne/Verluste (Notis Anzahl)",
+            "crates": "Gefundene Kisten",
+            "winrate": "Gewinnrate"
         }
     },
-    "dashboard": { 
-        "login": "Hit the button below and let the magic happen",
-        "noUser": "No data found for you. Try sending a message in a chat where NotedBot is active",
+    "dashboard": {
+        "login": "Drück einfach hier unten auf denn Button und die Magie legt los",
+        "noUser": "Ich habe keine Daten von dir Bitte schreibe in einen Chat wo Notedbot ist",
         "available": {
             "live": {
-                "channel": "Bot in chat",
-                "user": "Cheers"
+                "channel": "Bot Im Chat",
+                "user": "Mahlzeit"
             },
             "offline": {
-                "channel": "Bot joins when ready",
-                "user": "Hello"
+                "channel": "Tritt bei, wenn bereit",
+                "user": "Hallo"
             }
         },
         "settings": {
-            "title": "Channel Settings",
-            "description": "Basic settings for NotedBot in your channel",
-            "lang": "Channel Language",
-            "langBlock": "Block Custom Language",
-            "silentBlock": "Suppress all errors and do not output them"
+            "title": "Channel Einstellungen",
+            "description": "Grund Einstellungen von NotedBot in deinen Channel",
+            "lang": "Channel Sprache",
+            "langBlock": "Personalisierte Sprache Blocken",
+            "silentBlock": "Alle Fehler unterdrücken und nicht ausgeben"
         },
         "announce": {
-            "title": "Announcements",
-            "description": "Control which notifications NotedBot sends in your channel."
+            "title": "Ankündigungen",
+            "description": "Steuere, welche Benachrichtigungen NotedBot in deinem Channel sendet",
+            "status": "Aktiv",
+            "me": "/me Stil"
         },
         "editor": {
-            "title": "Internal Editors",
-            "description": "Manage your internal editors (Bot Intern)",
-            "existing": "This user is already an editor",
-            "noList": "No internal editors right now",
-            "cancel": "Cancel",
-            "add": "Add Internal Editor",
-            "zb": "e.g. Wydios",
-            "delete": "Delete"
+            "title": "Interne Editoren",
+            "description": "Verwalte die internen Editoren deines Bots",
+            "existing": "Dieser Nutzer ist bereits ein interner Editor",
+            "noList": "Aktuell gibt es keine internen Editoren",
+            "cancel": "Abbrechen",
+            "add": "Internen Editor hinzufügen",
+            "zb": "z. B. Wydios",
+            "delete": "Entfernen"
         },
         "ambassador": {
             "title": "Ambassadors",
-            "description": "Manage your ambassadors (Bot Intern)",
-            "existing": "This user is already an ambassador",
-            "noList": "No ambassadors right now",
-            "cancel": "Cancel",
-            "add": "Add Ambassador",
-            "zb": "e.g. Wydios",
-            "delete": "Delete"
+            "description": "Verwalte deine Ambassadors (Bot Intern)",
+            "existing": "Dieser User ist schon Ambassador",
+            "noList": "Keine Ambassadors gerade",
+            "cancel": "Abbruch",
+            "add": "Füge Ambassador hinzu",
+            "zb": "z.b Wydios",
+            "delete": "Löschen"
         },
         "custom": {
             "title": "Custom Commands",
-            "description": "Create your own Twitch chat commands with variables, cooldowns and permissions",
-            "noCommands": "No commands available",
-            "edit": "Edit",
-            "delete": "Delete",
-            "create": "Create Command",
-            "save": "Save",
-            "showAll": "Show All (+{count})",
-            "showLess": "Show Less",
-            "editTitle": "Edit Command",
-            "createTitle": "Create Command",
-            "modalDescription": "Setup your custom Twitch command",
+            "description": "Erstelle eigene Twitch Chat Commands mit Variablen, Cooldowns und Permissions",
+            "noCommands": "Keine Commands vorhanden",
+            "edit": "Bearbeiten",
+            "delete": "Löschen",
+            "create": "Command erstellen",
+            "save": "Speichern",
+            "showAll": "Alle anzeigen (+{count})",
+            "showLess": "Weniger anzeigen",
+            "editTitle": "Command bearbeiten",
+            "createTitle": "Command erstellen",
+            "modalDescription": "Erstelle deinen eigenen Twitch Command",
             "trigger": "Trigger",
-            "message": "Message",
-            "showVariables": "Show Variables",
-            "hideVariables": "Hide Variables",
+            "message": "Nachricht",
+            "showVariables": "Variablen anzeigen",
+            "hideVariables": "Variablen verstecken",
             "cooldown": "Cooldown",
-            "cooldownDescription": "Minimum 3 seconds, max 3600 seconds",
+            "cooldownDescription": "Minimum 3 Sekunden, maximal 3600 Sekunden",
             "permission": "Permission",
-            "permissionDescription": "Who can use this command",
-            "close": "Close",
+            "permissionDescription": "Wer darf diesen Command benutzen",
+            "close": "Schließen",
             "permissions": {
-                "default": "Default",
+                "default": "Standard",
                 "vip": "VIP",
                 "mod": "Moderator",
                 "ambassador": "Ambassador",
-                "broadcaster": "Broadcaster",
+                "broadcaster": "Streamer",
                 "admin": "Admin",
-                "dev": "Developer"
+                "dev": "Entwickler"
             }
         },
         "behavior": {
-            "title": "Advanced Settings",
-            "description": "Manage additional bot settings",
-            "mod_only": "Bot Only for Moderators",
-            "reply_to_stv": "Repeat 7TV Emotes",
-            "activity_mode": "Activity Mode",
+            "title": "Fortschrittlich Einstellungen",
+            "description": "Verwalte Weiter Settings vom Bot",
+            "mod_only": "Bot Nur für Moderatoren",
+            "reply_to_stv": "Wiederholt 7tv Emotes",
+            "activity_mode": "Aktivität's Mode",
             "live": "Live Only",
             "offline": "Offline Only",
             "always": "Always",
-            "use_action_messages": "Reply using /me",
-            "ai_enabled": "Enable AI",
-            "ai_personality": "AI Personality",
+            "use_action_messages": "Antwort in /me",
+            "ai_enabled": "AI Aktiveren",
+            "ai_personality": "AI Persönlichkeit",
             "ai_default": "Default",
             "ai_friendly": "Friendly",
             "ai_chaotic": "Chaotic",
@@ -194,40 +196,50 @@
             "ai_evil_ai": "Evil AI",
             "ai_papaplatte": "Papaplatte",
             "ai_letshugo": "LetsHugoTV",
-            "streak_enabled": "Enable Streak",
-            "streak_message": "Custom Streak Message",
-            "streak_placeholder": "Emote combo {count}x {emote}",
-            "pyramid_enabled": "Enable Pyramid",
-            "pyramid_message": "Custom Pyramid Message",
-            "pyramid_placeholder": "{count}-level pyramid with {emote}",
-            "variables": "Variables: {count} {emote} • Trigger at {number}"
+            "streak_enabled": "Streak Aktvieren",
+            "streak_message": "Custom Streak Nachricht",
+            "streak_placeholder": "Emote Combo {count}x {emote}",
+            "pyramid_enabled": "Pyramid Aktvieren",
+            "pyramid_message": "Custom Pyramid Nachricht",
+            "pyramid_placeholder": "{count}er Pyramide mit {emote}",
+            "variables": "Variablen: {count} {emote} • Trigger ab {number}"
         },
         "userSettings": {
-            "title": "User Settings",
-            "description": "Manage your personal NotedBot preferences",
-            "lang": "Sets the language NotedBot uses to communicate with you",
-            "antiping": "Prevents the bot from pinging you in messages",
-            "whisper": "The bot sends you messages via Whisper instead of chat (if possible)",
-            "presence": "Automatically updates your 7TV presence status",
-            "permission": "Your current NotedBot role"
+           "title": "Benutzereinstellungen",
+           "description": "Verwalte deine persönlichen Einstellungen für NotedBot",
+           "lang": "Legt fest, in welcher Sprache NotedBot mit dir schreibt",
+           "antiping": "Verhindert, dass dich der Bot in Nachrichten pingt",
+           "whisper": "Der Bot sendet dir Nachrichten per Whisper statt im Chat (wenn möglich)",
+           "presence": "Aktualisiert automatisch deinen 7TV-Presence-Status",
+           "permission": "Deine aktuelle Rolle bei NotedBot"
         },
         "safe": {
-            "title": "Safe Area",
-            "description": "Here you can re-add NotedBot to your channel.",
-            "status": "Active",
-            "me": "/me Style"
+            "title": "Sicher Bereich",
+            "rejoin": {
+                "title": "Bot neu verbinden",
+                "description": "Hier Kannst du NotedBot neu adden lassen ihn deinen channel.",
+                "done": "Neu verbinden"
+            },
+            "right": {
+                "title": "Mehr Rechte geben",
+                "description": "Aktiviere zusätzliche Rechte für weitere Bot-Funktionen.",
+                "done": "Rechte aktivieren"
+            }
         },
         "danger": {
-            "title": "Danger Zone",
-            "description": "If you remove the bot, ALL your data will be permanently deleted.\n\nThis includes:\n• Custom commands\n• Command settings (enabled/disabled)\n• Live notifications\n• 7TV / Twitch features (badges, emotes, paints)\n• Reminders & stored data\n\nFor security, you will receive a code that you must enter.\nAfter removal, you will be automatically logged out."
-        },
-        "remove": {
-            "title": "Are you <span style='color: var(--text-primary)'>REALLY</span> sure?",
-            "description": "To confirm removing NotedBot, type <strong class='dashboard-confirm-highlight'>{{code}}</strong> below. ⚠ This action CANNOT be undone."
-        },
-        "logout": {
-            "title": "Logout",
-            "description": "Log out of this website."
+            "title": "Gefahrenbereich",
+            "part": {
+                "title": "Bot Entfernen",
+                "description": "Wenn du den Bot entfernst, werden ALLE deine Daten dauerhaft gelöscht.\n\nDazu gehören:\n• Custom Commands\n• Command Einstellungen (aktiv/deaktiviert)\n• Live Benachrichtigungen\n• 7TV / Twitch Features (Badges, Emotes, Paints)\n• Erinnerungen & gespeicherte Daten\n\nDu bekommst zur Sicherheit einen Code, den du eingeben musst.\nNach dem Entfernen wirst du automatisch ausgeloggt.",
+                "remove": {
+                    "title": "Bist du dir <span style='color: var(--text-primary)'>WIRKLICH</span> sicher?",
+                    "description": "Wenn du NotedBot wirklich entfernen willst, schreibe <strong className='dashboard-confirm-highlight'>{{code}}</strong> unten hinein. ⚠ Diese Aktion kann NICHT rückgängig gemacht werden"
+                }
+            },
+            "logout": {
+                "title": "Abmelden",
+                "description": "Melde dich von dieser Website ab. Keine Sorge Notedbot funktion dananch weiter hin"
+            }
         }
     }
 }
