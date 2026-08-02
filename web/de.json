@@ -155,6 +155,7 @@
             "createTitle": "Command erstellen",
             "modalDescription": "Erstelle deinen eigenen Twitch Command",
             "trigger": "Trigger",
+            "aliases": "Aliase",
             "message": "Nachricht",
             "showVariables": "Variablen anzeigen",
             "hideVariables": "Variablen verstecken",
@@ -162,6 +163,8 @@
             "cooldownDescription": "Minimum 3 Sekunden, maximal 3600 Sekunden",
             "permission": "Permission",
             "permissionDescription": "Wer darf diesen Command benutzen",
+            "reply": "Antwort",
+            "replyDescription": "Antwortet direkt auf die ursprüngliche Nachricht",
             "close": "Schließen",
             "permissions": {
                 "default": "Standard",
