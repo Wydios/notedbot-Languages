@@ -98,15 +98,12 @@
     "dashboard": {
         "login": "Drück einfach hier unten auf denn Button und die Magie legt los",
         "noUser": "Ich habe keine Daten von dir Bitte schreibe in einen Chat wo Notedbot ist",
-        "available": {
-            "live": {
-                "channel": "Bot Im Chat",
-                "user": "Mahlzeit"
-            },
-            "offline": {
-                "channel": "Tritt bei, wenn bereit",
-                "user": "Hallo"
-            }
+        "noti": {
+            "channel": "Verwalte Grund Einstellungen von {channel} als {user}",
+            "cmds": "Verwalte Commands von {channel} als {user}",
+            "editors": "Verwalte die Ambassadors (nur im eigenen Channel) oder Emote-Editoren von {channel} als {user}",
+            "notification": "Verwalte die Benachrichtigungen für {channel} als {user}, z. B. globale Benachrichtigungen oder Chat-Alerts",
+            "user": "Verwalte deine Personlichen Einstellungen ({user})"
         },
         "settings": {
             "title": "Channel Einstellungen",
@@ -115,11 +112,18 @@
             "langBlock": "Personalisierte Sprache Blocken",
             "silentBlock": "Alle Fehler unterdrücken und nicht ausgeben"
         },
+        "auditLogs": {
+            "title": "Audit Logs",
+            "description": "Sieh dir die letzten Änderungen deines Channels an (nur Web)",
+            "empty": "Noch keine Audit Logs vorhanden.",
+            "added": "hinzugefügt",
+            "removed": "entfernt",
+            "changedFrom": "geändert von",
+            "to": "zu"
+        },
         "announce": {
             "title": "Ankündigungen",
-            "description": "Steuere, welche Benachrichtigungen NotedBot in deinem Channel sendet",
-            "status": "Aktiv",
-            "me": "/me Stil"
+            "description": "Steuere, welche Benachrichtigungen NotedBot in deinem Channel sendet"
         },
         "editor": {
             "title": "Interne Editoren",
@@ -134,19 +138,26 @@
         "ambassador": {
             "title": "Ambassadors",
             "description": "Verwalte deine Ambassadors (Bot Intern)",
+            "ownChannel": "Ambassadors können nur im eigenen Channel verwaltet werden",
             "existing": "Dieser User ist schon Ambassador",
             "noList": "Keine Ambassadors gerade",
-            "cancel": "Abbruch",
+            "cancel": "Abbrechen",
             "add": "Füge Ambassador hinzu",
             "zb": "z.b Wydios",
-            "delete": "Löschen"
+            "delete": "Entfernen"
+        },
+        "commands": {
+            "title": "Blocked Commands",
+            "description": "Blockiere Commands in deinem Channel",
+            "noCommands": "Keine Commands blockiert",
+            "selectCommand": "Command auswählen"
         },
         "custom": {
             "title": "Custom Commands",
             "description": "Erstelle eigene Twitch Chat Commands mit Variablen, Cooldowns und Permissions",
             "noCommands": "Keine Commands vorhanden",
             "edit": "Bearbeiten",
-            "delete": "Löschen",
+            "delete": "Entfernen",
             "create": "Command erstellen",
             "save": "Speichern",
             "showAll": "Alle anzeigen (+{count})",
@@ -175,6 +186,12 @@
                 "admin": "Admin",
                 "dev": "Entwickler"
             }
+        },
+        "topCommands": {
+            "title": "Top-Befehle",
+            "description": "Die meistgenutzten Befehle in deinem Kanal",
+            "empty": "Keine Befehlsdaten verfügbar",
+            "uses": "Nutzungen"
         },
         "behavior": {
             "title": "Fortschrittlich Einstellungen",
@@ -220,28 +237,34 @@
             "title": "Sicher Bereich",
             "rejoin": {
                 "title": "Bot neu verbinden",
-                "description": "Hier Kannst du NotedBot neu adden lassen ihn deinen channel.",
+                "description": "Hier kannst du NotedBot erneut mit deinem Channel verbinden, falls es Verbindungsprobleme gibt. So musst du ihn nicht entfernen und anschließend erneut adden.",
                 "done": "Neu verbinden"
             },
             "right": {
                 "title": "Mehr Rechte geben",
-                "description": "Aktiviere zusätzliche Rechte für weitere Bot-Funktionen.",
+                "description": "Aktiviere zusätzliche Rechte, damit weitere Bot-Funktionen genutzt werden können, wie zum Beispiel {prefix}mod/vip oder {prefix}settitle/setgame. Weitere Funktionen und Befehle können in Zukunft hinzukommen und zusätzliche Berechtigungen benötigen.",
                 "done": "Rechte aktivieren"
             }
         },
         "danger": {
             "title": "Gefahrenbereich",
             "part": {
-                "title": "Bot Entfernen",
-                "description": "Wenn du den Bot entfernst, werden ALLE deine Daten dauerhaft gelöscht.\n\nDazu gehören:\n• Custom Commands\n• Command Einstellungen (aktiv/deaktiviert)\n• Live Benachrichtigungen\n• 7TV / Twitch Features (Badges, Emotes, Paints)\n• Erinnerungen & gespeicherte Daten\n\nDu bekommst zur Sicherheit einen Code, den du eingeben musst.\nNach dem Entfernen wirst du automatisch ausgeloggt.",
+                "title": "Bot entfernen",
+                "description": "Wenn du den Bot entfernst, werden ALLE deine Daten dauerhaft gelöscht.\n\nDazu gehören:\n• Custom Commands & Einstellungen\n• Benachrichtigungen\n• Erinnerungen\n• Gespeicherte Bot- und Channel-Daten\n\nDu bekommst zur Sicherheit einen Bestätigungscode, den du eingeben musst.\nNach dem Entfernen wirst du automatisch ausgeloggt.",
+                "button": "Bot entfernen",
                 "remove": {
                     "title": "Bist du dir <span style='color: var(--text-primary)'>WIRKLICH</span> sicher?",
-                    "description": "Wenn du NotedBot wirklich entfernen willst, schreibe <strong className='dashboard-confirm-highlight'>{{code}}</strong> unten hinein. ⚠ Diese Aktion kann NICHT rückgängig gemacht werden"
+                    "description": "Wenn du NotedBot wirklich entfernen möchtest, gib den folgenden Code ein: {{code}} ⚠ Diese Aktion kann NICHT rückgängig gemacht werden.",
+                    "placeholder": "Code eingeben...",
+                    "cancel": "Abbrechen",
+                    "button": "Entfernen",
+                    "loading": "Wird entfernt..."
                 }
             },
             "logout": {
                 "title": "Abmelden",
-                "description": "Melde dich von dieser Website ab. Keine Sorge Notedbot funktion dananch weiter hin"
+                "description": "Melde dich von dieser Website ab. Keine Sorge, NotedBot funktioniert danach weiterhin in deinem Channel.",
+                "button": "Abmelden"
             }
         }
     }
