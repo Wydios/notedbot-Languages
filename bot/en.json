@@ -5,7 +5,7 @@
 
 	"cmd": {
 		"usage": "{FeelsDankMan ➜|wydiosStop} {usage}",
-		"emoteSlots": " • • {emoji} {free} slots remaining ({used}/{max})",
+		"emoteSlots": " • {emoji} {free} slots remaining ({used}/{max})",
 		"stv": {
 			"add": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} add <EmoteName • EmoteLink> [EmoteAlias] – adds an emote to your channel",
@@ -40,7 +40,7 @@
 			"yoink": {
 				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} yoink <Channel> <EmoteName> <Optional: EmoteAlias> – yoinks an emote from another channel",
 				"self": "{⛔ ➜|wydiosAngry} You can’t yoink your own emotes since they are already here",
-				"noFound": "{⚠️ ➜|wydiosStop} Emote `{emote}` not found in channel {channel|antiping}",
+				"noFound": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` not found in channel {channel|antiping}",
 				"nameConflict": "{⛔ ➜|wydiosAngry} The emote name ` {emote} ` is already in use in your channel",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` yoinked from channel {channel|antiping}",
 				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
@@ -157,91 +157,8 @@
 			"ownedSet": "{🚫 ➜|wydiosPout} The emote set does not belong to deisen channel and cannot be adjusted",
 			"noPerms": "{🚫 ➜|wydiosPout} You need 7TV permissions in this channel or {channel|antiping} can add you to the internal list with {prefix}editor {user}",
 			"noAcc": "{(7TV) ➜|wydios7tv} No 7TV account found for `{user}`",
-			"link": {
-			    "noEmote": "{FeelsDankMan|wydiosSad} Emote ` {emote} ` not found in the set",
-			    "emote": "{FeelsOkayMan|wydios7tv} ` {emote} ` ➜ ➜ {normalLink} CDN Link: • {cdnLink} (Size: 1-4)"
-			},
 			"isHere": "• The emote is already in the 7TV set. Use {prefix}7tv {command}"
 		},
-		"bttv": {
-			"add": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} add <EmoteName • EmoteId> [NewName] – adds a BTTV emote",
-				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
-				"invalidCode": "{⚠️ ➜|wydiosStop} The name ` {code} ` needs at least 1 capital letter and 4 characters",
-				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` was added successfully"
-			},
-			"remove": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} remove <EmoteName> – removes a BTTV emote",
-				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
-				"success": "{FeelsOkayMan 👍|wydiosOk} Emote `{emote}` was removed"
-			},
-			"rename": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} rename <EmoteName> <NewName>",
-				"missingName": "{⚠️ ➜|wydiosStop} Please provide a new name",
-				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
-				"invalidCode": "{⚠️ ➜|wydiosStop} The name ` {code} ` needs at least 1 capital letter and 4 characters",
-				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldName} ` was renamed to ` {newName} `"
-			},
-			"replace": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {usage} replace <EmoteName> <NewEmote • NewEmoteId • EmoteLink> – replaces a BTTV emote",
-				"notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
-				"sameId": "{⚠️ ➜|wydiosStop} The new emote is already ` {emote} `",
-				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emoteName} ` (old ID: {oldId}) was replaced with ID ({newId})"
-			},
-			"yoink": {
-				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
-			},
-			"error": {
-				"token": "💡 ➜ Sorry, but my BTTV token has expired. If this error continues, please inform an admin",
-				"noPerms": "{🚫 ➜|wydiosPout} I don't have BTTV permissions. Please add {bot} as an editor: {link}",
-				"maxSets": "{⛔ ➜|wydiosAngry} You have reached the maximum limit for BTTV emote sets",
-				"unknown": "{⚠️ ➜|wydiosStop} Unknown BTTV error"
-			},
-			"set": {
-				"free": "bttvNice {channel|antiping} still has {bttvAvailableSlots} emote slots free • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
-				"full": "bttvNice {channel|antiping} has no emote slots left • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
-				"compact": "bttvNice • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}"
-			},
-			"noPerms": "{🚫 ➜|wydiosPout} You need BTTV permissions, {channel|antiping} needs to add you with {prefix}editor {user} to the internal editor list",
-			"noAcc": "{bttvNice ➜|wydiosStop} No BTTV account found for `{user}`",
-			"isHere": "• The emote is already in the BTTV set. Use {prefix}bttv {command}"
-		},
-		"ffz": {
-			"add": {
-			    "usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} add <EmoteName • EmoteId> [NewName] – adds an FFZ emote",
-			    "notFound": "{⚠️ ➜|wydiosStop} No FFZ emote found with the name ` {emote} `",
-			    "success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` was added successfully"
-			},
-			"remove": {
-			    "usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} remove <EmoteName> – removes an FFZ emote",
-			    "notFound": "{⚠️ ➜|wydiosStop} No FFZ emote found with the name ` {emote} `",
-			    "success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` was removed successfully"
-			},
-			"rename": {
-			    "usage": "{FeelsDankMan ➜|wydiosStop} Please type {usage} rename <EmoteName> <NewName> – renames an FFZ emote",
-			    "notFound": "{⚠️ ➜|wydiosStop} No emote found with the name ` {emote} `",
-			    "success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` was renamed successfully"
-			},
-			"yoink": {
-				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
-			},
-			"error": {
-				"token": "💡 ➜ Sorry, but my FFZ token has expired. If this error continues, please inform an admin",
-				"noPerms": "{🚫 ➜|wydiosPout} Ich habe keine ffz-Rechte. Bitte füge {bot} als Editor: {link} hinzu",
-				"maxSets": "{⛔ ➜|wydiosAngry} Du hast das Maximale Limit vom ffz Emote Sets erreicht",
-				"unknown": "{⚠️ ➜|wydiosStop} Unbekannter ffz Fehler"
-			},
-			"set": {
-				"noSet": "{⛔ ➜|wydiosThink} {channel|antiping} has no FFZ emote set",
-				"free": "FrankerZ {channel|antiping} still has {ffzAvailableSlots} emote slots free • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
-				"full": "FrankerZ {channel|antiping} has no emote slots left • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
-				"compact": "FrankerZ • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}"
-			},
-			"noPerms": "{🚫 ➜|wydiosPout} You need FFZ permissions, {channel|antiping} needs to add you with {prefix}editor {user} to the internal editor list",
-			"noAcc": "{FrankerZ ➜|wydiosStop} No FFZ account found for `{user}`",
-			"isHere": "• The emote is already in the FFZ set. Use {prefix}ffz {command}"
-		},
-		"StvBttvFfzSetStart": "{channel|antiping} still has ({stvFree} • {bttvFree} • {ffzFree} = {totalFree}) emote slots free",
 		"editors": {
    			"noList": "{⚠️ ➜|wydiosStop} There are no users in the internal editor list. You can add users with {prefix}editor <username>",
    			"list": "{FeelsOkayMan ➜|wydiosOk} Here are all internal editors: {list}",
@@ -270,17 +187,122 @@
     		"19": "My sources say no.",
     		"20": "The future is bright."
 		},
+		"emotes": {
+		    "errs": {
+		        "noPerms": "{🚫 ➜|wydiosPout} You need Editor permissions. {channel|antiping} can add you to the internal list with {prefix}editor {user}",
+		        "noEmote": {
+		            "auto": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` was not found on any supported platform",
+		            "provider": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` was not found on {provider}",
+		            "many": "{⚠️ ➜|wydiosStop} Emote(s) ` {emotes} ` were not found",
+					"api": "{⚠️ ➜|wydiosStop} Emote was not found",
+					"noId": "{⚠️ ➜|wydiosStop} I couldn't get a valid ID from the provided link",
+					"sameId": "{🚫 ➜|wydiosThink} This emote is already in the set as {emote}",
+					"yoink": "{⚠️ ➜|wydiosThink} Emote ` {emote} ` not found • Try {prefix}reload"
+		        },
+		        "stv": {
+		            "token": "💡 ➜ Sorry, but my 7TV token has expired. If this error persists, please inform a developer",
+		            "noSet": "{🚫 ➜|wydiosPout} {channel|antiping} does not have an active 7TV emote set",
+		            "noAll": "{🚫 ➜|wydiosPout} The `all` flag is not allowed for `setFrom` or `setIn`",
+		            "invalidSet": "{🚫 ➜|wydiosPout} The emote set `{set}` does not belong to this channel",
+		            "ownedSet": "{🚫 ➜|wydiosPout} The emote set does not belong to your channel and cannot be modified",
+		            "noPerms": "{🚫 ➜|wydiosPout} I don't have 7TV permissions. Please add {bot} as an Editor: {link} (manage Emote Sets & Emotes; for imports, also allow creating Emote Sets)",
+		            "nameConflict": "{⛔ ➜|wydiosAngry} The name is already being used by ` {emote} `",
+		            "maxSets": "{⚠️ ➜|wydiosStop} The emote set is full. Please remove another emote • Emote Set: {link}",
+		            "invalidAlias": "{⛔ ➜|wydiosPout} 7TV does not accept these characters",
+		            "unknown": "{⚠️ ➜|wydiosStop} Unknown 7TV error"
+		        },
+		        "bttv": {
+		            "token": "💡 ➜ Sorry, but my BTTV token has expired. If this error persists, please inform a developer",
+		            "invalidAlias": "{⚠️ ➜|wydiosStop} The alias `{alias}` must be 4–32 characters long, contain an uppercase letter, and may only contain letters and numbers",
+		            "noPerms": "{🚫 ➜|wydiosPout} I don't have BTTV permissions. Please add {bot} as an Editor: {link}",
+		            "maxSets": "{⛔ ➜|wydiosAngry} You have reached the maximum number of BTTV emote sets",
+		            "unknown": "{⚠️ ➜|wydiosStop} Unknown BetterTTV error"
+		        },
+		        "ffz": {
+					"renameUnsupported": "{🚫 ➜|wydiosSad} Unfortunately, emotes cannot be renamed on FrankerFaceZ",
+					"replaceUnsupported": "{🚫 ➜|wydiosSad} Since FrankerFaceZ unfortunately doesn't allow emote aliases, I can't replace emotes",
+		            "token": "💡 ➜ Sorry, but my FFZ token has expired. If this error persists, please inform a developer",
+		            "noSet": "{🚫 ➜|wydiosPout} {channel|antiping} does not have an active FFZ emote set",
+		            "noPerms": "{🚫 ➜|wydiosPout} I don't have FFZ permissions. Please add {bot} as an Editor: {link}",
+		            "maxSets": "{⛔ ➜|wydiosAngry} You have reached the maximum number of FFZ emote sets",
+					"server": "{⛔ ➜|wydiosAngry} Internal processing error at FrankerFaceZ",
+		            "unknown": "{⚠️ ➜|wydiosSad} Unknown FrankerFaceZ error"
+		        },
+				"selfYoink": "{💡 ➜|wydiosBased} You don't need to yoink this emote, as it's already here"
+		    },
+		    "add": {
+		        "share": "New emote was added to {provider} by {user|antiping}",
+		        "set": {
+		            "success": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to emote set{plural} ({successSets})",
+		            "partial": "{⚠️ ➜|wydiosStop} Emote ` {emote} ` was added to emote set{plural} ({successSets}). Failed: {failedSets}",
+		            "failed": "{⛔ ➜|wydiosAngry} Emote ` {emote} ` could not be added to any emote set"
+		        },
+		        "setFrom": {
+		            "success": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added from the emote set `{set}` from {from}",
+		            "failed": "{⛔ ➜|wydiosAngry} Emote ` {emote} ` could not be added from the emote set `{set}` from {from}"
+		        },
+		        "setIn": {
+		            "success": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to the emote set `{set}` from {channel}",
+		            "failed": "{⛔ ➜|wydiosAngry} Emote ` {emote} ` could not be added to the emote set `{set}` from {channel}"
+		        },
+		        "default": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to {provider}",
+		        "in": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to {provider} for {channel|antiping}",
+		        "from": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to {provider} from {from|antiping}",
+		        "inFrom": "{FeelsOkayMan|wydiosOk} Emote ` {emote} ` was added to {provider} from {from|antiping} to {channel|antiping}",
+		        "for": "(expires in {duration})"
+		    },
+		    "remove": {
+		        "failed": {
+		            "one": "{⚠️ ➜|wydiosStop} Emote `{emote}` could not be removed",
+		            "many": "{⚠️ ➜|wydiosStop} {count} emote(s) could not be removed - {emotes}"
+		        },
+		        "partial": {
+		            "success": "{FeelsOkayMan|wydiosOk} {successCount} emote(s) removed",
+		            "failed": "{⚠️|wydiosPout} {failedCount} emote(s) could not be removed - {failedEmotes}"
+		        },
+		        "success": {
+		            "one": "{FeelsOkayMan|wydiosOk} Emote `{emote}` was removed",
+		            "many": "{FeelsOkayMan|wydiosOk} {count} emotes were removed"
+		        },
+		        "emoteSlots": {
+		            "stv": " 7TV {stvEmoji} {stvFree} slots remaining ({stvUsed}/{stvMax})",
+		            "bttv": " BTTV {bttvEmoji} {bttvFree} slots remaining ({bttvUsed}/{bttvMax})",
+		            "ffz": " FFZ {ffzEmoji} {ffzFree} slots remaining ({ffzUsed}/{ffzMax})"
+		        }
+		    },
+		    "rename": "{FeelsOkayMan 👍|wydiosOk} Emote `{oldName}` was renamed to ` {newName} ` on {provider}",
+			"replace": "{FeelsOkayMan 👍|wydiosOk} Emote `{emote}` was replaced on {provider} (old ID: {oldId})",
+			"yoink": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
+		},
+		"set": {
+			"StvBttvFfzSetStart": "{channel|antiping} still has ({stvFree} • {bttvFree} • {ffzFree} = {totalFree}) emote slots free",
+		    "stv": {
+		        "free": "{(7TV)|wydios7tv} {channel|antiping} has {stvAvailableSlots} emote slots remaining • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}",
+		        "full": "{(7TV)|wydios7tv} {channel|antiping} has no emote slots remaining • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}",
+		        "compact": "{(7TV)|wydios7tv} • Emotes: {stvUsedSlots}/{stvCapacity} • Set Name: {stvEmoteSetName} • {stvEmoteSetLink}"
+		    },
+		    "bttv": {
+		        "free": "bttvNice {channel|antiping} has {bttvAvailableSlots} emote slots remaining • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
+		        "full": "bttvNice {channel|antiping} has no emote slots remaining • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}",
+		        "compact": "bttvNice • Emotes: {bttvUsedSlots}/{bttvCapacity} • {bttvEmoteLink}"
+		    },
+		    "ffz": {
+		        "free": "FrankerZ {channel|antiping} has {ffzAvailableSlots} emote slots remaining • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
+		        "full": "FrankerZ {channel|antiping} has no emote slots remaining • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}",
+		        "compact": "FrankerZ • Emotes: {ffzUsedSlots}/{ffzCapacity} • {ffzEmoteLink}"
+		    }
+		},
 		"afk": {
 			"tooLong": "{FeelsDankMan ➜|wydiosStop} Your message is too long",
-			"afk": "➜ {user} is now Afk {message} ⏱️",
+			"afk": "{➜|wydiosLove} {user} is now Afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} is going to sleep {message} 💤",
 			"food": "Tasty ➜ {user} is going to eat {message} 🍕",
-			"work": "➜ {user} is going to work {message} 💼",
-			"shower": "➜ {user} is going to shower {message} 🚿",
-			"goon": "uuh ➜ {user} is going to goonen {message} 🥛",
+			"work": "{Maloche ➜|wydiosSad} {user} is going to work {message} 💼",
+			"shower": "{➜|wydios123456789Rave} {user} is going to shower {message} 🚿",
+			"goon": "{uuh ➜|wydiosFreundschaft} {user} is going to goonen {message} 🥛",
 			"resume": {
 				"failed": "{⚠️ ➜|wydiosStop} {user|antiping} Unfortunately you can no longer record your Afk status because it has already expired",
-				"success": "➜ {user} is Afk again {emoji}"
+				"success": "{➜|wydiosLove} {user} is Afk again {emoji}"
 			}
 		},
 		"ambassador": {
@@ -309,32 +331,65 @@
 			"userHaveNoBadges": "{FeelsDankMan ➜|wydiosStop} {userName} has no badges",
 			"userHaveNoBadge": "{FeelsDankMan ➜|wydiosStop} {userName} has no active badge"
 		},
-  		"ban": {
-    		"success": {
-      			"ban": "{FeelsOkayMan 👍|wydiosOk} {user} has been banned",
-      			"unban": "{FeelsOkayMan 👍|wydiosOk} {user} has been unbanned",
-				"timeout": "{FeelsOkayMan 👍|wydiosOk} {user} has been timed out for {duration} seconds",
-      			"warn": "{FeelsOkayMan 👍|wydiosOk} {user} has been warned"
-    		},
-    		"self": {
-      			"user": {
-        			"ban": "{FeelsDankMan ➜|wydiosStop} You cannot ban yourself",
-        			"warn": "{FeelsDankMan ➜|wydiosStop} You cannot warn yourself"
-      			},
-      			"channel": "{FeelsDankMan ➜|wydiosStop} You cannot ban the broadcaster"
-    		},
-    		"error": {
-      			"alreadyBan": "{FeelsDankMan ➜|wydiosStop} {user} is already banned. Use {prefix}unban {user} to unban them",
-      			"thinkMod": "{FeelsDankMan ➜|wydiosStop} You cannot ban another moderator",
-      			"noBan": "{FeelsDankMan ➜|wydiosStop} {user} is not banned. Use {prefix}ban {user} to ban them",
-				"noDuration": "{FeelsDankMan ➜|wydiosStop} Please provide a valid timeout duration",
-				"maxDuration": "{FeelsDankMan ➜|wydiosStop} A timeout can only last up to 2 weeks (1209600 seconds)",
-      			"unknown": "{FeelsDankMan ➜|wydiosThink} {user} could not be banned/unbanned/warned"
-    		},
-    		"dev": {
-      			"ban": "{FeelsDankMan ➜|wydiosStop} I won’t ban one of my devs",
-      			"warn": "{FeelsDankMan ➜|wydiosStop} I won’t warn one of my devs"
-    		}
+		"ban": {
+		    "ban": {
+		        "success": "{FeelsOkayMan 👍|wydiosOk} {user} has been banned",
+		        "block": {
+		            "user": "{FeelsDankMan ➜|wydiosStop} You cannot ban yourself",
+		            "channel": "{FeelsDankMan ➜|wydiosStop} You cannot ban the broadcaster",
+		            "dev": "{FeelsDankMan ➜|wydiosStop} Tssk, I don't ban any of my developers"
+		        },
+		        "error": {
+		            "already": "{FeelsDankMan ➜|wydiosStop} {user} is already banned",
+		            "thinkMod": "{FeelsDankMan ➜|wydiosStop} You cannot ban another moderator",
+		            "unknown": "{FeelsDankMan ➜|wydiosThink} {user} could not be banned"
+		        }
+		    },
+		    "unban": {
+		        "success": "{FeelsOkayMan 👍|wydiosOk} {user} has been unbanned",
+		        "error": {
+		            "notBanned": "{FeelsDankMan ➜|wydiosStop} {user} is not banned",
+		            "unknown": "{FeelsDankMan ➜|wydiosThink} {user} could not be unbanned"
+		        }
+		    }
+		},
+		"timeout": {
+		    "timeout": {
+		        "success": "{FeelsOkayMan 👍|wydiosOk} {user} has been timed out for {duration} seconds",
+		        "block": {
+		            "user": "{FeelsDankMan ➜|wydiosStop} You cannot time yourself out",
+		            "channel": "{FeelsDankMan ➜|wydiosStop} You cannot time out the broadcaster",
+		            "dev": "{FeelsDankMan ➜|wydiosStop} Tssk, I don't time out any of my developers"
+		        },
+		        "error": {
+		            "already": "{FeelsDankMan ➜|wydiosStop} {user} is already timed out. Use {prefix}untimeout {user} to remove the timeout",
+		            "thinkMod": "{FeelsDankMan ➜|wydiosStop} You cannot time out another moderator",
+		            "invalidDuration": "{FeelsDankMan ➜|wydiosStop} Please enter a valid timeout duration",
+		            "maxDuration": "{FeelsDankMan ➜|wydiosStop} A timeout can last a maximum of 2 weeks (1209600 seconds)",
+		            "unknown": "{FeelsDankMan ➜|wydiosThink} {user} could not be timed out"
+		        }
+		    },
+		    "untimeout": {
+		        "success": "{FeelsOkayMan 👍|wydiosOk} The timeout for {user} has been removed",
+		        "error": {
+		            "notTimeouted": "{FeelsDankMan ➜|wydiosStop} {user} does not have an active timeout",
+		            "unknown": "{FeelsDankMan ➜|wydiosThink} The timeout for {user} could not be removed"
+		        }
+		    }
+		},
+		"warn": {
+		    "warn": {
+		        "success": "{FeelsOkayMan 👍|wydiosOk} {user} has been warned",
+		        "block": {
+		            "user": "{FeelsDankMan ➜|wydiosStop} You cannot warn yourself",
+		            "channel": "{FeelsDankMan ➜|wydiosStop} You cannot warn the broadcaster",
+		            "dev": "{FeelsDankMan ➜|wydiosStop} Tssk, I don't warn any of my developers"
+		        },
+		        "error": {
+		            "unknown": "{FeelsDankMan ➜|wydiosThink} {user} could not be warned"
+		        }
+		    },
+		    "unwarn": "Since the Twitch API does not provide a way to perform this action through the API, the user must do it manually here: {channelLink}"
 		},
 		"channel": {
 			"emotes": {
@@ -352,16 +407,6 @@
 				"change": "{FeelsOkayMan 👍|wydiosOk} Language set to {lang} • to see all commands do {prefix}commands",
 				"off": "{FeelsOkayMan 👍|wydiosOk} Language is now free for everyone. You can set it yourself with {prefix}lang <de • en>",
 				"on": "{FeelsOkayMan 👍|wydiosOk} I will now speak only {lang} in this channel"
-			},
-			"perms": {
-  				"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} perms <set • remove • get • list>",
-  				"invalidCommand": "{FeelsDankMan ➜|wydiosStop} Command `{name}` not found or not customizable",
-  				"invalidPerm": "{FeelsDankMan ➜|wydiosStop} Invalid permission `{perm}` • Perms: default, vip, mod, ambassador, broadcaster, dev, admin",
-  				"set": "{FeelsOkayMan 👍|wydiosOk} `{name}` has been set to `{perm}`",
-  				"remove": "{FeelsOkayMan 👍|wydiosOk} `{name}` has been reset to default",
-  				"get": "{FeelsOkayMan ➜|wydiosOk} `{name}` is currently set to `{perm}`",
-  				"list": "{FeelsOkayMan ➜|wydiosOk} Here are all custom permissions: {link}",
-  				"listEmpty": "{FeelsDankMan ➜|wydiosStop} No custom permissions set"
 			},
 			"settings": "{FeelsOkayMan ➜|wydiosThink} Current Settings • Prefix: {prefix} • Language: {lang} Blocked?: {block} • Mode: {mode} - Chat: {chat} (CONDUIT > IRC) • Stv-Reply: {stv} • Reminders: {reminders} • Notis-Reminders: {notis}",
 			"mode": {
@@ -539,6 +584,11 @@
 				"invalid": "{⛔ ➜|wydiosAngry} The command does not contain a valid message",
 				"success": "{FeelsOkayMan 👍|wydiosOk} The command `{trigger}` was successfully stolen from `{channel}`"
 			},
+			"invalid": {
+			    "cooldown": "{FeelsDankMan|wydiosStop} Invalid Cooldown. Please use a value between {min} and {max} seconds",
+			    "permission": "{FeelsDankMan|wydiosStop} Invalid Permission. Allowed values: default, vip, mod, ambassador, broadcaster, dev, admin",
+			    "reply": "{FeelsDankMan|wydiosStop} Invalid Reply Value. Please use either true or false"
+			},
 		    "noList": "{⚠️ ➜|wydiosStop} There are no custom commands. Add some using {prefix}addcmd",
 		    "list": "{FeelsOkayMan 👉|wydiosOk} There are {custom} custom commands {list}",
 		    "prefix": "{BigSad ➜|wydiosSad} My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
@@ -565,6 +615,10 @@
 		    	"hitting": "{peepoHappy|wydiosHappy} {user|antiping} found the emote it was ` {emote} ` • 💶 You received {notis} Notis"
 		  	}
 		},
+		"emotelink": {
+			"noEmote": "{FeelsDankMan|wydiosSad} Emote ` {emote} ` not found in the set",
+			"emote": "{FeelsOkayMan|wydiosOk} ` {emote} ` ➜ {link}"
+		},
 		"eval": {
 			"sql": "{⛔ ➜|wydiosAngry} Database codes are only meant for {prefix}sql",
 			"code": "{FeelsDankMan ➜|wydiosDebug}"
@@ -573,13 +627,6 @@
 			"invalid": "{⚠️ ➜|wydiosStop} I couldn't extract a valid ID from the URL",
     		"noEmote": "{⚠️ ➜|wydiosStop} I couldn't find any emote",
     		"emote": "{FeelsDankMan ➜|wydiosOk} ezGif link for ` {emote} ` {link}"
-		},
-		"firstfollower": {
-  			"notFound": "{FeelsDankMan ➜|wydiosStop} I couldn't find a first follower",
-  			"result": {
-  				"self": "{FeelsOkayMan ➜|wydiosOk} You are the first follower of {channel|antiping}, following since {duration}",
-  				"other": "{FeelsOkayMan ➜|wydiosOk} {user|antiping} is the first follower of {channel|antiping}, following since {duration}"
-			}
 		},
 		"followage": {
     		"self": "{FeelsDankMan ➜|wydiosThink} You can't follow yourself",
@@ -742,25 +789,24 @@
 			"canPrestige": "• 🚀 {receiver|antiping} you can now prestige with {prefix}prestige"
 		},
 		"globalannounce": {
-    		"noMod": "💡 Note: I am not a moderator or VIP. Because of that, Twitch's rate limit might prevent the message from being sent",
-    		"OnOff": "{FeelsOkayMan 👍|wydiosOk} All global notifications (from: Badge/Emotes/Dev-Changelog/7TV) have been {mode}",
-    		"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global `{value}` message has been {mode}",
-    		"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification `Badge/Paint` has been {mode}",
-    		"changelog": "{FeelsOkayMan 👍|wydiosOk} imGlitch Dev Changelog notification has been {mode}",
-    		"allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} `/me` has been {mode} for all announces",
-    		"featureMe": "{FeelsOkayMan 👍|wydiosOk} `/me` has been {mode} for `{value}`"
+		    "noMod": "💡 Note: I am not a moderator or VIP. Because of this, Twitch's rate limit may prevent the message from being sent",
+		    "all": "{FeelsOkayMan 👍|wydiosOk} All global notifications ({value}) have been {mode}",
+		    "feature": "{FeelsOkayMan 👍|wydiosOk} The global {value} notification has been {mode}",
+		    "notice": "• Use {prefix}gping {value} to get pinged",
+			"deprecated": "💡 This command is deprecated and may be removed in the future. Please use {prefix}notify <twitch • 7tv> instead."
 		},
 		"globalping": {
-    		"notEnabled": "{FeelsDankMan ➜|wydiosStop} There is no global announce message for {feature}. A moderator can enable it with {prefix}globalannounce {feature}",
-    		"noneEnabled": "{FeelsDankMan ➜|wydiosStop} No global announce message is enabled. A moderator can enable it with {prefix}globalannounce {feature}",
-    		"ping": {
-        		"added": "{FeelsOkayMan 👍|wydiosOk} You will be pinged when a global {feature} announce is sent",
-        		"removed": "{FeelsOkayMan 👍|wydiosOk} You will no longer be pinged when a global {feature} announce is sent",
-        		"addedAll": "{FeelsOkayMan 👍|wydiosOk} You will be pinged for all global announces",
-        		"removedAll": "{FeelsOkayMan 👍|wydiosOk} You will no longer be pinged for any global announces"
-    		}
+		    "notEnabled": "{FeelsDankMan ➜|wydiosStop} There is no global announce notification for {value}. A moderator can enable it with {prefix}globalannounce {value}",
+		    "noneEnabled": "{FeelsDankMan ➜|wydiosStop} No global announce notifications are enabled. A moderator must first enable one with {prefix}globalannounce <emote • badge • 7tv • changelog>",
+		    "ping": {
+		        "added": "{FeelsOkayMan 👍|wydiosOk} You will be pinged when a global {value} announce is sent",
+		        "removed": "{FeelsOkayMan 👍|wydiosOk} You will no longer be pinged when a global {value} announce is sent",
+		        "addedAll": "{FeelsOkayMan 👍|wydiosOk} You will be pinged for all active global announces",
+		        "removedAll": "{FeelsOkayMan 👍|wydiosOk} You will no longer be pinged for any global announces"
+		    },
+			"deprecated": "💡 This command is deprecated and may be removed in the future. Please use {prefix}notifyme <twitch • 7tv> instead."
 		},
-		"gonner": "uuh ➜ Here’s a Gooner EmoteSet: {link}",
+		"gonner": "uuh ➜ Here are the Gooner Sets: {link}",
 		"gooning": "🤤 💦 {goon} on {link}",
 		"help": {
 			"noCommand": "{⚠️ ➜|wydiosStop} Command `{command}` was not found",
@@ -791,45 +837,38 @@
     		"list": "➜ Here are the top {count} Notis users: {list}"
 		},
 		"link": {
-  			"lastfm": {
-				"usage": "{FeelsDankMan ➜|wydiosStop} please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username> – add, change, remove your account or show help",
-				"help": {
-    				"usage": "{FeelsDankMan ➜|wydiosStop} please type {prefix}{trigger} lastfm help <acc • connection> – shows info about your account and connection",
-    				"acc": "💡 ➜ No LastFM account? Go to last.fm and create an account there",
-    				"service": "💡 ➜ You can connect your LastFM account to Spotify/YT Music here: https://www.last.fm/settings/applications"
-				},
-    			"add": {
-      				"noUser": "{⚠️ ➜|wydiosStop} Please provide a Last.fm username",
-      				"success": "{FeelsOkayMan 👍|wydiosOk} Connected with Last.fm user {name}"
-    			},
-    			"remove": {
-      				"notExisting": "{⚠️ ➜|wydiosStop} You’re not in my database. Use {usage} add <LastFm username> to connect",
-      				"success": "{FeelsOkayMan 👍|wydiosOk} I removed you from my database"
-    			}
-  			},
+			"lastfm": {
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} lastfm <Last.fm username or URL/remove> – Connect or remove your account",
+			    "invalidUrl": "{⚠️ ➜|wydiosStop} The provided Last.fm URL is invalid. Example: https://www.last.fm/user/<YOUR_USERNAME>",
+			    "remove": {
+			        "notExisting": "{⚠️ ➜|wydiosStop} You don't have a Last.fm account connected to your Twitch account",
+			        "success": "{FeelsOkayMan 👍|wydiosOk} I removed your Last.fm account from my database"
+			    },
+			    "success": "{FeelsOkayMan 👍|wydiosOk} Successfully connected to the Last.fm user {name}"
+			},
 			"statsfm": {
-			  	"usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} statsfm <add • set • remove • help> <stats.fm Custom URL> – add, update, remove your account, or show help",
-			  	"help": "💡 ➜ Open your stats.fm profile and copy the part after https://stats.fm/ from the URL. Example: https://stats.fm/user123 → user123",
-			  	"add": {
-			    	"noUser": "{⚠️ ➜|wydiosStop} Please provide your stats.fm Custom URL",
-			    	"success": "{FeelsOkayMan 👍|wydiosOk} Successfully linked your stats.fm profile ({name})"
-			  	},
-			  	"remove": {
-			    	"notExisting": "{⚠️ ➜|wydiosStop} You're not in my database. Use {usage} add <stats.fm Custom URL> to link your profile",
-			    	"success": "{FeelsOkayMan 👍|wydiosOk} Your stats.fm profile has been removed from my database"
-			  	}
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} statsfm <stats.fm username or URL/remove> – Connect or remove your account",
+			    "invalidUrl": "{⚠️ ➜|wydiosStop} The provided stats.fm URL is invalid. Examples: https://stats.fm/<YOUR_USERNAME> or https://stats.fm/<YOUR_USER_ID>",
+			    "remove": {
+			        "notExisting": "{⚠️ ➜|wydiosStop} You don't have a stats.fm profile connected to your Twitch account",
+			        "success": "{FeelsOkayMan 👍|wydiosOk} I removed your stats.fm profile from my database"
+			    },
+			    "success": "{FeelsOkayMan 👍|wydiosOk} Successfully connected to the stats.fm profile {name}"
 			}
 		},
 		"livemsg": {
 		    "noList": "{⚠️ ➜|wydiosStop} There are no live notifications in this channel. A mod can create one with {prefix}livemsg <streamer>",
 		    "list": "{FeelsDankMan ➜|wydiosOk} Here are all live notifications: {link}",
 		    "noMod": "💡 Note: I am not a moderator or VIP. Twitch rate limits may prevent the message from being sent",
+			"limit": "{FeelsDankMan ➜|wydiosStop} You have reached the Livemsg limit of {limit} streamers. Use {prefix}livemsgs to view your current list",
 		    "added": "{FeelsOkayMan 👍|wydiosOk} Live notification created for {added} (Notify: {prefix}liveping {added})",
 		    "removed": "{FeelsOkayMan 👍|wydiosOk} Live notification removed for {removed}",
 		    "failed": {
         		"single": "{FeelsBadMan|wydiosThink} Channel `{failed}` not found",
         		"plural": "{FeelsBadMan|wydiosThink} Channels not found {failed}"
-    		}
+    		},
+			"pingEnabled": "{🔔|wydiosQQ} Ping(s) for {ping} enabled",
+			"deprecated": "💡 This command is deprecated and may be removed in the future. Please use {prefix}notify live <streamer> instead."
 		},
 		"liveping": {
 		    "added": {
@@ -843,7 +882,8 @@
 		    "failed": {
 		        "single": "{FeelsBadMan|wydiosThink} There is no live notification for this channel: {failed}. A mod can create one with {prefix}livemsg {failed}",
 		        "plural": "{FeelsBadMan|wydiosThink} There are no live notifications for these channels: {failed}. A mod can create them with {prefix}livemsg {failed}"
-		    }
+		    },
+			"deprecated": "💡 This command is deprecated. Please use {prefix}notifyme live <streamer> going forward."
 		},
 		"logs": {
  			"normal": "{FeelsOkayMan 👍|wydiosOk} Here are the logs for the channel {channel|antiping} {link}",
@@ -888,6 +928,56 @@
    				"changes": "{FeelsOkayMan ➜|wydiosOk} Name history of {user|antiping} ({userNames})"
   			}
 		},
+		"notify": {
+		    "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} <type> • Available types: {list}",
+		    "noList": "{⚠️ ➜|wydiosStop} No notifications found in the {channel|antiping} channel",
+		    "list": "{FeelsOkayMan ➜|wydiosOk} Here are all notifications in the {channel|antiping} channel • {list}",
+		    "twitch": {
+		        "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} twitch <emotes • badges • changelog>",
+		        "disabled": "{FeelsOkayMan 👍|wydiosOk} `Twitch {value}` notifications disabled",
+		        "enabled": "{FeelsOkayMan 👍|wydiosOk} `Twitch {value}` notifications enabled • (Notify: {prefix}notifyme twitch {value})",
+		        "enabledWithPing": "{FeelsOkayMan 👍|wydiosOk} `Twitch {value}` notifications enabled • You will be notified whenever there are new `Twitch {value}`"
+		    },
+		    "stv": {
+		        "disabled": "{FeelsOkayMan 👍|wydiosOk} 7TV (Paints, Badges & Shop) notifications disabled",
+		        "enabled": "{FeelsOkayMan 👍|wydiosOk} 7TV (Paints, Badges & Shop) notifications enabled • (Notify: {prefix}notifyme 7tv)",
+		        "enabledWithPing": "{FeelsOkayMan 👍|wydiosOk} 7TV (Paints, Badges & Shop) notifications enabled • You will be notified whenever there are new 7TV (Paints, Badges & Shop) updates"
+		    },
+		    "live": {
+		        "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} live <streamer>",
+		        "deleted": "{FeelsOkayMan 👍|wydiosOk} Live notifications removed for `{streamer}`",
+				"limit": "{FeelsDankMan ➜|wydiosStop} You have reached the limit of 50 live notifications. Please remove some with {prefix}notify live <streamer> before adding new ones",
+		        "created": "{FeelsOkayMan 👍|wydiosOk} Live notifications created for `{streamer}` • (Notify: {prefix}notifyme live {streamer})",
+		        "createdWithPing": "{FeelsOkayMan 👍|wydiosOk} Live notifications created for `{streamer}` • You will be notified when `{streamer}` goes live"
+		    },
+			"alert": {
+			    "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} alert <sub • resub • sub_gift • community_sub_gift • raid>",
+			    "disabled": "{FeelsOkayMan 👍|wydiosOk} Notifications for `{type}` disabled",
+			    "enabled": "{FeelsOkayMan 👍|wydiosOk} Notifications for `{type}` enabled • More settings will be available on the web soon"
+			}
+		},
+		"notifyme": {
+		    "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} <type> • Available types: {list}",
+		    "noList": "{⚠️ ➜|wydiosStop} You don't have any personal notifications in the {channel|antiping} channel",
+		    "list": "{FeelsOkayMan ➜|wydiosOk} Here are your personal notifications in the {channel|antiping} channel • {list}",
+		    "twitch": {
+		        "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} twitch <emotes • badges • changelog>",
+		        "notEnabled": "{⚠️ ➜|wydiosStop} Global `{value}` notifications are not enabled in this channel • A moderator can enable them with {prefix}notify twitch {value}",
+		        "added": "{FeelsOkayMan 👍 |wydiosOk} You will be pinged whenever there are new `{value}`",
+		        "removed": "{FeelsOkayMan 👍|wydiosOk} You will no longer receive pings for new `{value}`"
+		    },
+		    "stv": {
+		        "notEnabled": "{⚠️ ➜|wydiosStop} Global `7TV` notifications are not enabled in this channel • A moderator can enable them with {prefix}notify 7tv",
+		        "added": "{FeelsOkayMan 👍 |wydiosOk} You will be pinged whenever something changes with 7TV Paints or Badges, or the Shop is updated",
+		        "removed": "{FeelsOkayMan 👍 |wydiosOk} You will no longer receive pings when something changes with 7TV Paints or Badges, or when the Shop is updated"
+		    },
+		    "live": {
+		        "usage": "{FeelsDankMan ➜|wydiosStop} Please use {prefix}{trigger} live <streamer>",
+		        "notEnabled": "{⚠️ ➜|wydiosStop} Live notifications for `{streamer}` are not enabled in this channel • A moderator can enable them with {prefix}notify live {streamer}",
+		        "added": "{FeelsOkayMan 👍 |wydiosOk} You will be pinged when {streamer} goes live",
+		        "removed": "{FeelsOkayMan 👍 |wydiosOk} You will no longer receive pings when {streamer} goes live"
+		    }
+		},
 		"optout": {
 			"list": "{FeelsDankMan|wydiosStop} Supported {trigger} commands (on = optout enabled, off = optout disabled): {list}",
 		    "notFound": "{⚠️ ➜|wydiosThink} You cannot {outOrin} the command `{command}`",
@@ -911,7 +1001,7 @@
 		},
 		"ping": {
   			"normal": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latency (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api}",
-			"dev": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latency (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Mod in {modCount} • 7TV in {stvCount}{affiliateText}{partnerText} • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api} • Subs: {allSubscriptions} (Cost: {cost}) • {serverMessage} Server: {serverDays}",
+			"dev": "{pong} ➜ Uptime (Bot: {botUp} | DB: {dbUp}, {dbKeys} Keys) • Latency (WS: {wsLz}ms | IRC: {ircLz}ms) • Channels: {chTotal} (Auth: {chAuth} | Mod: {chMod} | Susp: {chSusp}) • Mod in {modCount} • 7TV in {stv} • BTTV in {bttv}{affiliateText}{partnerText} • Ram: {memoryMB}mb • Cmds: {cmdUsed} • Api: {api} • Subs: {allSubscriptions} (Cost: {cost}) • {serverMessage} Server: {serverDays}",
 			"live": "{🚫 ➜|wydiosPout} The channel is currently live and has offline-only mode enabled for this command",
  		 	"offline": "{🚫 ➜|wydiosPout} The channel is currently offline and has live-only mode enabled for this command",
   			"tip": "An ambassador can re-enable the always mode using {prefix}mode default or always"
@@ -923,7 +1013,7 @@
 		},
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
-			"full": "{FeelsDankMan ➜|wydiosShook} Prestige 100 is the maximum. Use {prefix}rebirth to start over",
+			"full": "{FeelsDankMan ➜|wydiosShook} Prestige 100 is the maximum",
   			"canNot": "{🚫 ➜|wydiosPout} Current Prestige Level: {prestige} • You are still missing {needNotis} Notis • Salary: {minReward}–{maxReward} Notis. With Prestige {prestige2}, your salary increases to {nextMinReward}–{nextMaxReward} Notis • 🏦 Your current balance is {notis} Notis",
   			"confirm": "{FeelsOkayMan 👍|wydiosOk} Congratulations! Your prestige has been increased to level {level} • 🏦 New account balance: {notis} Notis"
 		},
@@ -1017,7 +1107,7 @@
 		},
 		"stats": {
     		"noUser": "🛑 ➜ {user|antiping} is not in my database. Use {prefix}notis to register!",
-    		"stats": "{peepoHappy ➜|wydiosBased} {user|antiping} has {notis} Notis • Prestige {prestige} • Rebirth {rebirth} • {prefix}notis used: {debug}x • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
+    		"stats": "{peepoHappy ➜|wydiosBased} {user|antiping} has {notis} Notis • Prestige {prestige} • {prefix}notis used: {debug}x • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
 		},
 		"stream": {
     		"uptime": {
@@ -1036,13 +1126,20 @@
     		},
 			"never": "{FeelsDankMan ➜|wydiosOk} {channel|antiping} has never streamed"
 		},
+		"streamboard": {
+		    "unavailable": "{FeelsDankMan ➜|wydiosStop} {channel|antiping} is not an Affiliate or Partner and therefore has no available leaderboard",
+		    "gifts": "{FeelsDankMan ➜|wydiosOk} 🎁 Top {period} Sub-Gifters for {channel|antiping} • {period}: {leaderboard}",
+		    "bits": "{FeelsDankMan ➜|wydiosOk} 💎 Top {period} Cheerers for {channel|antiping} • {period}: {leaderboard}",
+		    "clips": "{FeelsDankMan ➜|wydiosOk} 🎬 Top {period} Clips for {channel|antiping} • {period}: {leaderboard}",
+		    "default": "{FeelsDankMan ➜|wydiosOk} 📊 Streamboard {period} for {channel|antiping} • Subs: {gifts} • Bits: {bits} • Clips: {clips}"
+		},
 		"short": {
 			"blocked": "⛔️ ➜ This website is not allowed",
 			"success": "{FeelsDankMan ➜|wydiosOk} Here is your link: {url}"
 		},
 		"song": {
-			"userNotLinked": "{⚠️ ➜|wydiosStop} {user|antiping} is not linked in my database. He can connect with {prefix}link lastfm/statsfm add <LastFm/Statsfm Username>",
-			"noLinked": "{⚠️ ➜|wydiosStop} {user|antiping} is not linked in my database. Please link your account using {prefix}link lastfm/statsfm add <LastFm/Statsfm Username>",
+			"userNotLinked": "{⚠️ ➜|wydiosStop} {user|antiping} is not linked in my database. He can connect with {prefix}link lastfm/statsfm <LastFm/Statsfm Username/url>",
+			"noLinked": "{⚠️ ➜|wydiosStop} {user|antiping} is not linked in my database. Please link your account using {prefix}link lastfm/statsfm <LastFm/Statsfm Username/url>",
 			"noSong": "PepePls ➜ {user|antiping} is not listening to anything right now",
 			"lastSong": "• Last Song ` {title} ` by {artist} ({date})",
 			"play": "{user|antiping} is currently listening to ` {title} ` by {artist} {emote} {count} {link}"
@@ -1050,7 +1147,7 @@
 		"subage": {
 			"hidden": "{FeelsDankMan ➜|wydiosPout} {user|antiping} has hidden their subscription status in {channel|antiping}",
 		    "never": "{FeelsDankMan ➜|wydiosOk} {user|antiping} has never been subscribed to {channel|antiping}",
-			"founder": "• Founder",
+			"founder": "• 👑 Founder",
 		    "end": "{FeelsDankMan ➜|wydiosOk} {user|antiping} was subscribed to {channel|antiping} for {time} months • Subscription ended {ago} days ago",
 		    "is": "{FeelsDankMan ➜|wydiosOk} {user|antiping} has been subscribed to {channel|antiping} for {months} months • Tier {tier}{prime} • Sub {renew}{timePart} • Streak: {streak} months",
 		    "gifted": " • HolidayPresent Gifted by: @{giftedBy|antiping}"
@@ -1220,13 +1317,18 @@
   			"admin": "{🚫|wydiosShrug} ➜ You must be an Administrator to execute this command",
   			"error": "{Shrug ➜|wydiosShrug} Insufficient permissions to execute this command"
 		},
-		"customPerms": "• Custom permissions can be changed with {prefix}cs perm set {name}",
 		"stvDown": "{peepoSad ➜|wydiosPout} 7tv is currently down, try again later",
 		"badWord": "{⛔️☝️ ➜|wydiosShook} The message was withheld because it contained an internally prohibited expression",
-		"misstake": "{⚠️☝️ ➜|wydiosDebug} An error occurred, you can report it with {prefix}suggest",
+		"misstake": "{⚠️☝️ ➜|wydiosDebug} An error occurred. A report has been automatically created and forwarded for review",
 		"accAvailable": "• name is available",
 		"accNotAvailable": "• name is not available",
-		"noAcc": "imGlitch ➜ No Twitch account found for `{user}`",
+		"noAcc": {
+    		"twitch": "imGlitch ➜ No Twitch account found for `{user}`",
+    		"autoProvider": "{(7TV) , bttvNice , FrankerZ ➜|wydiosSad} No account found on 7TV, BTTV or FFZ for `{user}`",
+    		"stv": "{(7TV) ➜|wydios7tv} No 7TV account found for `{user}`",
+    		"bttv": "{bttvNice ➜|wydiosStop} No BetterTTV account found for `{user}`",
+    		"ffz": "{FrankerZ ➜|wydiosStop} No FrankerFaceZ account found for `{user}`"
+		},
 		"noAmbassador": "{monkaS cvHazmat ➜|wydiosShrug} I need Lead Moderator permissions to execute this command",
 		"noMod": "{monkaS cvHazmat ➜|wydiosShrug} I need Moderator permissions to execute this command",
 		"noVip": "{monkaS WineTime ➜|wydiosShrug} I need VIP permissions to execute this command",
@@ -1298,15 +1400,17 @@
 			  	"tier": " • with a Tier {tier} sub"
 			}
 		},
-		"ban": {
-			"unban": "{peepoHappy|wydiosLove} Clap Welcome back to Twitch {user}"
+		"unban": "{peepoHappy|wydiosLove} Clap Welcome back to Twitch {user}",
+		"temporary": {
+		    "emote": "{🗑️|wydiosBased} Emote `{emote}` was removed from {provider} after {expires} ({delay} late)",
+		    "command": "Coming soon..."
 		}
 	},
 
 	"afk": {
 		"afk": "{peepoHappy ➜|wydiosHappy} {user}",
 		"bedge": "GuMo ➜ {user}",
-		"unknown": "➜ {user}",
+		"unknown": "{➜|wydiosQQ} {user}",
 		"duration": "Duration: {time}",
 		"message": "• Message: {userMessage}",
 		"return": {
@@ -1347,9 +1451,9 @@
     		"cd": "{emoji} {time} CD",
     		"bank": "🏦 Balance: {bNotis} Notis",
     		"prestige": "💎 Prestige: {pLevel}",
-			"rebirth": "🔥 Rebirth: {rLevel}",
     		"ready": "🚀 Ready for Prestige? Use {prefix}prestige",
-    		"birthday": "🍰 Birthday Bonus +300 Notis"
+    		"birthday": "🍰 Birthday Bonus +300 Notis",
+			"chest": "📦 Chest found! ({chest} total)"
   		},
 		"messages": {
 			"1": {
@@ -1570,14 +1674,14 @@
 				    "maythe4th": "🛸 Ouch, {user|antiping}! You pushed your hyperdrive too hard, and it failed just before the finish line. The prize goes to someone else, and you lose {notis} Notis."
 				},
 				"nothing": {
-				    "normal": "🚔 Tough luck, {user|antiping}! You won the race, but the police showed up, and you had to make a run for it.",
-				    "christmas": "🚨 Tough luck, {user|antiping}! You won the Christmas race, but the police showed up, and you had to make a run for it.",
-				    "halloween": "🚓 Tough luck, {user|antiping}! You won the haunted race, but the police showed up, and you had to make a run for it.",
-				    "easter": "🚔 Tough luck, {user|antiping}! You won the Easter race, but the police showed up, and you had to make a run for it.",
-				    "birthday": "🚨 Tough luck, {user|antiping}! You won the birthday race, but the police showed up, and you had to make a run for it.",
-				    "mothersday": "🚓 Tough luck, {user|antiping}! You won the Mother's Day race, but the police showed up, and you had to make a run for it.",
-				    "fathersday": "🚔 Tough luck, {user|antiping}! You won the Father's Day race, but the police showed up, and you had to make a run for it.",
-				    "maythe4th": "🚨 Tough luck, {user|antiping}! You won the Hyperrace, but the Galactic Police showed up, and you had to make a run for it."
+				    "normal": "🚔 Tough luck, {user|antiping}! You won the race, but the police showed up and you had to flee.",
+				    "christmas": "🚨 Tough luck, {user|antiping}! You won the Christmas race, but the police showed up and you had to flee.",
+				    "halloween": "🚓 Tough luck, {user|antiping}! You won the Ghost race, but the police showed up and you had to flee.",
+				    "easter": "🚔 Tough luck, {user|antiping}! You won the Easter race, but the police showed up and you had to flee.",
+				    "birthday": "🚨 Tough luck, {user|antiping}! You won the Birthday race, but the police showed up and you had to flee.",
+				    "mothersday": "🚓 Tough luck, {user|antiping}! You won the Mother's Day race, but the police showed up and you had to flee.",
+				    "fathersday": "🚔 Tough luck, {user|antiping}! You won the Father's Day race, but the police showed up and you had to flee.",
+				    "maythe4th": "🚨 Tough luck, {user|antiping}! You won the Hyperrace, but the Galactic Police showed up and you had to flee."
 				},
 				"cooldown": {
 				    "normal": "🚧 Slow down, {user|antiping}! The street race hasn't started yet. Please wait another {message}!",
@@ -1590,14 +1694,14 @@
 				    "maythe4th": "🚀 Slow down, {user|antiping}! The Hyperrace hasn't started yet. Please wait another {message}!"
 				},
 				"ping": {
-				    "normal": "🏁 Hey {user}, a secret street race is about to begin tonight. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "christmas": "🎁 Hey {user}, the secret Christmas race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "halloween": "👻 Hey {user}, the secret haunted race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "easter": "🐇 Hey {user}, the secret Easter race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "birthday": "🎉 Hey {user}, the secret birthday race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "mothersday": "🌹 Hey {user}, the secret Mother's Day race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "fathersday": "🔧 Hey {user}, the secret Father's Day race is about to begin. The prize? A whole lot of Notis! Start your ride with {prefix}notis!",
-				    "maythe4th": "🚀 Hey {user}, the secret Hyperrace is about to begin. The prize? A whole lot of Notis! Start your hypercar with {prefix}notis!"
+				    "normal": "📱 Psst, {user}! A secret street race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "christmas": "🛷 Psst, {user}! The secret Christmas race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "halloween": "👻 Psst, {user}! The secret Ghost Race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "easter": "🐇 Psst, {user}! The secret Easter race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "birthday": "🎉 Psst, {user}! The secret Birthday race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "mothersday": "💌 Psst, {user}! The secret Mother's Day race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "fathersday": "🔧 Psst, {user}! The secret Father's Day race has begun! The prize? Tons of Notis! Hop in and hit the road with {prefix}notis!",
+				    "maythe4th": "🚀 Psst, {user}! The secret Hyperrace has begun! The prize? Tons of Notis! Hop into your Hypercar and jump to hyperspace with {prefix}notis!"
 				}
 			},
 			"5": {
