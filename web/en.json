@@ -98,15 +98,12 @@
     "dashboard": { 
         "login": "Hit the button below and let the magic happen",
         "noUser": "No data found for you. Try sending a message in a chat where NotedBot is active",
-        "available": {
-            "live": {
-                "channel": "Bot in chat",
-                "user": "Cheers"
-            },
-            "offline": {
-                "channel": "Bot joins when ready",
-                "user": "Hello"
-            }
+        "noti": {
+            "channel": "Manage the basic settings for {channel} as {user}",
+            "cmds": "Manage the commands for {channel} as {user}",
+            "editors": "Manage the Ambassadors (only in your own channel) or Emote Editors of {channel} as {user}",
+            "notification": "Manage notifications for {channel} as {user}, such as global notifications or chat alerts",
+            "user": "Manage your personal settings ({user})"
         },
         "settings": {
             "title": "Channel Settings",
@@ -114,6 +111,15 @@
             "lang": "Channel Language",
             "langBlock": "Block Custom Language",
             "silentBlock": "Suppress all errors and do not output them"
+        },
+        "auditLogs": {
+            "title": "Audit Logs",
+            "description": "View the latest changes made to your channel (Web only)",
+            "empty": "No audit logs yet.",
+            "added": "added",
+            "removed": "removed",
+            "changedFrom": "changed from",
+            "to": "to"
         },
         "announce": {
             "title": "Announcements",
@@ -132,12 +138,19 @@
         "ambassador": {
             "title": "Ambassadors",
             "description": "Manage your ambassadors (Bot Intern)",
+            "ownChannel": "Ambassadors can only be managed in your own channel",
             "existing": "This user is already an ambassador",
             "noList": "No ambassadors right now",
             "cancel": "Cancel",
             "add": "Add Ambassador",
             "zb": "e.g. Wydios",
             "delete": "Delete"
+        },
+        "commands": {
+            "title": "Blocked Commands",
+            "description": "Block commands in your channel",
+            "noCommands": "No commands blocked",
+            "selectCommand": "Select command"
         },
         "custom": {
             "title": "Custom Commands",
@@ -173,6 +186,12 @@
                 "admin": "Admin",
                 "dev": "Developer"
             }
+        },
+        "topCommands": {
+            "title": "Top Commands",
+            "description": "The most used commands in your channel",
+            "empty": "No command data available",
+            "uses": "uses"
         },
         "behavior": {
             "title": "Advanced Settings",
@@ -218,12 +237,12 @@
             "title": "Security Area",
             "rejoin": {
                 "title": "Reconnect Bot",
-                "description": "Reconnects NotedBot with your channel.",
+                "description": "Here you can reconnect NotedBot to your channel if you are experiencing any connection issues. This way, you don't have to remove and add it again.",
                 "done": "Reconnect"
             },
             "right": {
                 "title": "Grant More Permissions",
-                "description": "Enable additional permissions for more bot features.",
+                "description": "Enable additional permissions so more bot features can be used, such as {prefix}mod/vip or {prefix}settitle/setgame. More features and commands may be added in the future and could require additional permissions.",
                 "done": "Enable Permissions"
             }
         },
@@ -231,15 +250,21 @@
             "title": "Danger Zone",
             "part": {
                 "title": "Remove Bot",
-                "description": "If you remove the bot, ALL of your data will be permanently deleted.\n\nThis includes:\n• Custom Commands\n• Command settings (enabled/disabled)\n• Live notifications\n• 7TV / Twitch features (badges, emotes, paints)\n• Reminders & saved data\n\nFor security, you will receive a code that you must enter.\nAfter removal, you will be automatically logged out.",
+                "description": "If you remove the bot, ALL of your data will be permanently deleted.\n\nThis includes:\n• Custom Commands & settings\n• Notifications\n• Reminders\n• Saved bot and channel data\n\nFor your protection, you will receive a confirmation code that you must enter.\nAfter removing the bot, you will automatically be logged out.",
+                "button": "Remove Bot",
                 "remove": {
                     "title": "Are you <span style='color: var(--text-primary)'>REALLY</span> sure?",
-                    "description": "If you really want to remove NotedBot, enter <strong className='dashboard-confirm-highlight'>{{code}}</strong> below. ⚠ This action CANNOT be undone"
+                    "description": "If you really want to remove NotedBot, enter the following code: {{code}} ⚠ This action CANNOT be undone.",
+                    "placeholder": "Enter code...",
+                    "cancel": "Cancel",
+                    "button": "Remove",
+                    "loading": "Removing..."
                 }
             },
             "logout": {
-                "title": "Log out",
-                "description": "Log out from this website. Don't worry, NotedBot will continue to work afterwards."
+                "title": "Log Out",
+                "description": "Log out of this website. Don't worry, NotedBot will continue to work in your channel.",
+                "button": "Log Out"
             }
         }
     }
